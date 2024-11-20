@@ -1,4 +1,9 @@
 /* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,6 +25,7 @@ header {
     overflow-x: auto; /* Barra de desplazamiento horizontal */
     white-space: nowrap; /* Evita que los elementos se envuelvan */
     box-sizing: border-box; /* Considera el padding en el ancho total */
+    gap: 20px; /* Espacio entre los botones */
 }
 
 header h1 {
@@ -92,22 +98,32 @@ section {
 }
 
 .left-section {
-    width: 100%;
+    position: fixed;
+    width: 300px;
+    height: 86%;
+    left: 15px;
+    overflow-y: auto; /* Permite desplazarse cuando el contenido es demasiado grande */
+    max-height: 100%; /* Limitar el tamaño del historial visible */
     background-color: #D0E5F1; /* Azul claro relajante */
     border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efecto de flotación */
-    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efecto de flote */
     margin-top: 30px; /* Separar de la parte superior */
-    margin-left: 15px;
-    max-width: 6cm;
+    max-width: 7cm;
+    padding: 10px;
+    z-index: 5;
 }   
 
-/* Estilo de la sección derecha */
+.topic-index {
+    flex-grow: 1;
+    overflow-y: auto; /* Permite desplazarse cuando el contenido es demasiado grande */
+    max-height: 100%; /* Limitar el tamaño del historial visible */
+    padding-right: 5px;
+    margin-left: 15px;
+}
+
 .right-section {
     position: fixed;
     margin-top: 30px; /* Separar de la parte superior */
-    /*top: 10%;  Evitar que se sobreponga al header */
-    height: calc(100vh - 30px); /* Tamaño escalable: ocupa toda la altura del navegador menos el header */
     right: 15px;
     width: 300px; /* Puedes ajustar el tamaño según tus necesidades */
     height: 86%; /* Altura para el chat */
@@ -121,13 +137,19 @@ section {
     z-index: 5;
 }
 
-.back-section {
-    max-width: 10cm; /* Limitar el ancho a 10 cm */
+.back-section-right {
     width: 100%;
     position: relative;
     margin-top: 30px; /* Separar de la parte superior */
     margin-right: 15px;
     max-width: 6cm;
+}
+.back-section-left {
+    width: 100%;
+    position: relative;
+    margin-top: 30px; /* Separar de la parte superior */
+    margin-left: 15px;
+    max-width: 8cm;
 }
 
 /* Área de historial */
@@ -138,7 +160,6 @@ section {
     padding-right: 5px;
 }
 
-/* Estilo para el área de entrada de mensaje */
 .chat-input {
     display: flex;
     justify-content: space-between;
@@ -219,7 +240,49 @@ ul {
 
 ul li {
     margin: 10px 0;
+    list-style: none;
+    position: relative; /* Necesario para manejar la sublista dentro del flujo */
+    padding-bottom: 0; /* No añadir espacio adicional cuando no hay sublista visible */
 }
+
+/* Sublista */
+ul li .sublist {
+    display: block; /* Asegura que se pueda mostrar */
+    background-color: #D0E5F1;
+    padding: 5px;
+    list-style: none;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    opacity: 0; /* Inicialmente invisible */
+    pointer-events: none; /* No interactuable antes de mostrarse */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out; /* Suavizar la transición */
+    max-height: 0; /* Comienza sin altura */
+    overflow: hidden; /* Ocultar contenido extra */
+    margin-top: 10px; /* Separación entre el tema y la sublista */
+    margin-left: 5px;
+}
+
+/* Mostrar sublista al pasar el ratón */
+ul li:hover .sublist {
+    opacity: 1; /* Hace visible la sublista */
+    pointer-events: auto; /* Permite interactuar con la sublista */
+    max-height: 500px; /* Altura máxima suficiente para mostrar la sublista */
+}
+
+/* No modificar el padding-bottom cuando el ratón está sobre la sublista */
+ul li:hover {
+    padding-bottom: 0; /* No añadir espacio adicional cuando la sublista se muestra */
+}
+
+/* Mantener la sublista visible mientras el ratón esté sobre ella o sobre el tema */
+ul li:hover .sublist,
+ul li .sublist:hover {
+    opacity: 1; /* Mantener la sublista visible */
+    pointer-events: auto; /* Habilitar la interacción */
+}
+
 
 ul li a {
     text-decoration: none;
