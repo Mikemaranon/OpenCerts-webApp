@@ -16,6 +16,10 @@ header {
     background-color: #4A90E2; /* Azul relajado para el header */
     padding: 10px 20px;
     z-index: 10;
+    overflow: hidden;
+    overflow-x: auto; /* Barra de desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+    box-sizing: border-box; /* Considera el padding en el ancho total */
 }
 
 header h1 {
@@ -30,7 +34,6 @@ header h1 {
 
 .button1, .button2 {
     margin: 0;
-
 }
 
 .button1 button, .button2 button {
@@ -50,7 +53,7 @@ header h1 {
 
 .login-container {
     text-align: right;
-    margin-right: 30px; /* Desplazamos ligeramente el formulario hacia la izquierda */
+    margin-right: 0px; /* Desplazamos ligeramente el formulario hacia la izquierda */
 }
 
 .login-form {
@@ -89,7 +92,6 @@ section {
 }
 
 .left-section {
-    max-width: 10cm; /* Limitar el ancho a 10 cm */
     width: 100%;
     background-color: #D0E5F1; /* Azul claro relajante */
     border-radius: 15px; /* Bordes redondeados */
@@ -103,10 +105,12 @@ section {
 /* Estilo de la sección derecha */
 .right-section {
     position: fixed;
-    top: 90px; /* Evitar que se sobreponga al header */
+    margin-top: 30px; /* Separar de la parte superior */
+    /*top: 10%;  Evitar que se sobreponga al header */
+    height: calc(100vh - 30px); /* Tamaño escalable: ocupa toda la altura del navegador menos el header */
     right: 15px;
     width: 300px; /* Puedes ajustar el tamaño según tus necesidades */
-    height: 82%; /* Altura para el chat */
+    height: 86%; /* Altura para el chat */
     background-color: #f1f1f1;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -116,6 +120,7 @@ section {
     padding: 10px;
     z-index: 5;
 }
+
 .back-section {
     max-width: 10cm; /* Limitar el ancho a 10 cm */
     width: 100%;
@@ -129,8 +134,7 @@ section {
 .chat-history {
     flex-grow: 1;
     overflow-y: auto; /* Permite desplazarse cuando el contenido es demasiado grande */
-    max-height: 300px; /* Limitar el tamaño del historial visible */
-    margin-bottom: 10px;
+    max-height: 100%; /* Limitar el tamaño del historial visible */
     padding-right: 5px;
 }
 
@@ -139,27 +143,56 @@ section {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    margin-right: 0%;
+    gap: 10px; /* Espaciado entre el input y el botón */
 }
 
 .chat-input input {
     width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .chat-input button {
-    width: 15%;
+    width: 25%;
     background-color: #4A90E2;
     border: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .chat-input button:hover {
     background-color: #1C5B90;
 }
+
+/* Mensajes del chat */
+.message {
+    max-width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Mensaje del usuario */
+.message.user {
+    background-color: #D0E5F1; /* Azul clarito */
+    color: #003D73; /* Azul oscuro */
+    align-self: flex-end; /* Alinea los mensajes del usuario a la derecha */
+    margin-left: 10%;
+}
+
+/* Mensaje de la IA */
+.message.ai {
+    background-color: #F1F1F1; /* Gris claro */
+    color: #333; /* Texto oscuro */
+    align-self: flex-start; /* Alinea los mensajes de la IA a la izquierda */
+}
+
 
 .center-section {
     background-color: white;
