@@ -1,0 +1,91 @@
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4A90E2; 
+    padding: 10px 20px;
+    z-index: 10;
+    overflow: hidden;
+    overflow-x: auto; /* Barra de desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+    box-sizing: border-box; /* Considera el padding en el ancho total */
+    gap: 20px; /* Espacio entre los botones */
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+}
+
+.button1, .button2 {
+    margin: 0;
+}
+
+.button1 button, .button2 button {
+    padding: 10px 20px;
+    background-color: #003D73; /* Azul oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Hace que el botón ocupe todo el ancho de su div */
+    font-size: 24px;
+}
+
+.button1 button:hover, .button2 button:hover {
+    background-color: #1C5B90; /* Color al pasar el mouse */
+}
+
+.login-container {
+    text-align: right;
+    margin-right: 0px; /* Desplazamos ligeramente el formulario hacia la izquierda */
+}
+
+.login-form {
+    display: inline-block;
+    background-color: #0067B8; /* Azul más fuerte */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-form input {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.login-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #003D73; /* Azul oscuro */
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+#toggleButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #003D73;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleButton:hover {
+    background-color: #1C5B90;
+}

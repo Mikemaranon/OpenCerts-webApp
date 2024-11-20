@@ -1,0 +1,22 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+main {
+    display: flex;
+    margin-top: 60px; /* Para evitar que el header se superponga al contenido */
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+    height: 100vh;
+}
