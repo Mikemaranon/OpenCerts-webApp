@@ -88,8 +88,7 @@ section {
     height: 100vh;
 }
 
-.left-section,
-.right-section {
+.left-section {
     max-width: 10cm; /* Limitar el ancho a 10 cm */
     width: 100%;
     background-color: #D0E5F1; /* Azul claro relajante */
@@ -97,16 +96,69 @@ section {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efecto de flotación */
     position: relative;
     margin-top: 30px; /* Separar de la parte superior */
-}
+    margin-left: 15px;
+    max-width: 6cm;
+}   
 
-.left-section {
-    margin-left: 10px;
-    max-width: 6cm
-}
-
+/* Estilo de la sección derecha */
 .right-section {
-    margin-right: 10px;
-    max-width: 6cm
+    position: fixed;
+    top: 90px; /* Evitar que se sobreponga al header */
+    right: 15px;
+    width: 300px; /* Puedes ajustar el tamaño según tus necesidades */
+    height: 82%; /* Altura para el chat */
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    z-index: 5;
+}
+.back-section {
+    max-width: 10cm; /* Limitar el ancho a 10 cm */
+    width: 100%;
+    position: relative;
+    margin-top: 30px; /* Separar de la parte superior */
+    margin-right: 15px;
+    max-width: 6cm;
+}
+
+/* Área de historial */
+.chat-history {
+    flex-grow: 1;
+    overflow-y: auto; /* Permite desplazarse cuando el contenido es demasiado grande */
+    max-height: 300px; /* Limitar el tamaño del historial visible */
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+
+/* Estilo para el área de entrada de mensaje */
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    width: 15%;
+    background-color: #4A90E2;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #1C5B90;
 }
 
 .center-section {
@@ -118,6 +170,7 @@ section {
 
 .center-section h1 {
     font-size: 34px;
+    color: rgb(107, 125, 184);
 }
 
 /* Estilo del índice */
@@ -144,4 +197,20 @@ ul li a {
 
 ul li a:hover {
     color: #1C5B90; /* Color al pasar el mouse */
+}
+
+#toggleButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #003D73;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleButton:hover {
+    background-color: #1C5B90;
 }
