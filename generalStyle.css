@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4A90E2; /* Azul relajado para el header */
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.login-container {
+    text-align: right;
+    margin-right: 30px; /* Desplazamos ligeramente el formulario hacia la izquierda */
+}
+
+.login-form {
+    display: inline-block;
+    background-color: #0067B8; /* Azul más fuerte */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-form input {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.login-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #003D73; /* Azul oscuro */
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Estilo para las secciones */
+main {
+    display: flex;
+    margin-top: 60px; /* Para evitar que el header se superponga al contenido */
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+    height: 100vh;
+}
+
+.left-section,
+.right-section {
+    max-width: 10cm; /* Limitar el ancho a 10 cm */
+    width: 100%;
+    background-color: #D0E5F1; /* Azul claro relajante */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efecto de flotación */
+    position: relative;
+    margin-top: 30px; /* Separar de la parte superior */
+}
+
+.left-section {
+    margin-left: 10px;
+    max-width: 6cm
+}
+
+.right-section {
+    margin-right: 10px;
+    max-width: 6cm
+}
+
+.center-section {
+    background-color: white;
+    flex-grow: 1; /* La sección central ocupa el espacio restante */
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Estilo del índice */
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #003D73;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    color: #1C5B90; /* Color al pasar el mouse */
+}
