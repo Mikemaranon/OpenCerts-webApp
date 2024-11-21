@@ -23,15 +23,18 @@ header h1 {
 }
 .title {
     width: 33%;
+    position: relative;
+    padding-left: 107px;
     align-self: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
 
     .button-container {
         width: 33%;
         display: flex;
         gap: 20px; /* Espacio entre los botones */
+        align-items: center;
     }
 
     .button1, .button2 {
@@ -63,6 +66,7 @@ header h1 {
     .login-form {
         display: inline-block;
         background-color: #0067B8; /* Azul más fuerte */
+        right: 0px;
         padding: 10px;
         border-radius: 5px;
     }
@@ -101,12 +105,13 @@ header h1 {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .button-container, .login-container {
         display: none;
     }
     .title {
         width: 100%;
         text-align: center;
+        padding-left: 0px;
     }
 }

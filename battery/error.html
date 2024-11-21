@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Examen</title>
+    <link rel="stylesheet" href="../styles/error.css">
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div>
+                <button onclick="window.location.href='#'">Documentación</button>
+            </div>
+            <div class="title">
+                <h1>Formulario de Reporte de Examen</h1>
+            </div>
+            <div>
+                <button onclick="window.location.href='#'">Reportar error</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="center-section">
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="examen">Examen (ID):</label>
+                            <input type="text" id="examen" name="examen" placeholder="Ejemplo: dp203" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="topic">Número de Topic:</label>
+                            <input type="text" id="topic" name="topic" placeholder="Ejemplo: 1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pregunta">Número de Pregunta:</label>
+                            <input type="text" id="pregunta" name="pregunta" placeholder="Ejemplo: 10" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="error">Descripción del Error:</label>
+                            <textarea id="error" name="error" placeholder="Describe el error brevemente..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="solucion">Solución Propuesta:</label>
+                            <textarea id="solucion" name="solucion" placeholder="Propón una solución..." required></textarea>
+                        </div>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Web designed by Miguel Marañón Quero & Roberto García Moreno
+        </footer>
+    </div>
+</body>
+</html>
