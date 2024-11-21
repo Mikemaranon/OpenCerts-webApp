@@ -11,3 +11,9 @@
     color: rgb(107, 125, 184);
     margin-left: 10px;
 }
+
+footer {
+    padding: 10px;
+    color: grey;
+    text-align: center;
+}

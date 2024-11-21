@@ -21,13 +21,20 @@ header h1 {
     color: white;
 }
 
+.title {
+    width: 33%;
+    align-self: center;
+}
+
 .button-container {
+    width: 33%;
     display: flex;
     gap: 20px; /* Espacio entre los botones */
 }
 
 .button1, .button2 {
     margin: 0;
+    display: flex;
 }
 
 .button1 button, .button2 button {
@@ -46,8 +53,9 @@ header h1 {
 }
 
 .login-container {
+    width: 33%;
     text-align: right;
-    margin-right: 0px; /* Desplazamos ligeramente el formulario hacia la izquierda */
+    padding-right: 10px; /* Desplazamos ligeramente el formulario hacia la izquierda */
 }
 
 .login-form {
