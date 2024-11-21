@@ -25,6 +25,13 @@
         max-width: 6cm;
     }
 }
+.chaty {
+    margin-left: 5%;
+    top: 0px;
+    color: grey;
+    padding: 5px;
+    font-size: 20px;
+}
 
 /* Área de historial */
 .chat-history {
