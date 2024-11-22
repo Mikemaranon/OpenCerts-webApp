@@ -106,9 +106,11 @@ header h1 {
 }
 
 @media (max-width: 1300px) {
-    .button-container, .login-container {
+    .button-container, .login-container,
+    .button1, .button2 {
         display: none;
     }
+    
     .title {
         width: 100%;
         text-align: center;

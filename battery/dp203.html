@@ -43,15 +43,16 @@
                 </div>
             </section>
             <section class="center-section">
+                <br id="q10">
                 <h1>Temario para la preparación del examen de certificación DP-203</h1>
-                <div class="question" id="q10">
+                <div class="question">
                     <h3>Pregunta 10</h3>
                     <p class="description">
                         Esta pregunta tiene una descripción genérica, las respuestas aportadas no tienen ningún valor y
                         por supuesto esto es solo una prueba.<br>
                         Selecciona la opción correcta para completar la prueba
                     </p>
-                    <form class="answer" id="question10-form">
+                    <form id="question10-form">
                         <label>
                             <input type="radio" name="question10" value="opcion1"> Opción 1
                         </label>
@@ -81,15 +82,15 @@
                             // Puedes agregar código aquí para manipular el DOM o enviar datos via AJAX, por ejemplo
                         });
                     </script>
-                </div><br>
-                <div class="question" id="q20">
+                </div><br id="q20">
+                <div class="question" >
                     <h3>Pregunta 20</h3>
                     <p class="description">
                         Esta pregunta tiene una descripción genérica, las respuestas aportadas no tienen ningún valor y
                         por supuesto esto es solo una prueba.<br>
                         Selecciona la opción correcta para completar la prueba
                     </p>
-                    <form class="answer" id="question20-form">
+                    <form id="question20-form">
                         <label>
                             <input type="radio" name="question20" value="opcion1"> Opción 1
                         </label>
@@ -123,41 +124,93 @@
                 <div class="question" id="q30">
                     <h3>Pregunta 30</h3>
                     <p class="description">
-                        Esta pregunta tiene una descripción genérica, las respuestas aportadas no tienen ningún valor y
-                        por supuesto esto es solo una prueba.<br>
-                        Selecciona la opción correcta para completar la prueba
+                        Arrastra los bloques azules a las zonas de respuesta correctas. Esto es solo una prueba de diseño.
                     </p>
-                    <form class="answer" id="question30-form">
-                        <label>
-                            <input type="radio" name="question30" value="opcion1"> Opción 1
-                        </label>
-                        <label>
-                            <input type="radio" name="question30" value="opcion2"> Opción 2
-                        </label>
-                        <label>
-                            <input type="radio" name="question30" value="opcion3"> Opción 3
-                        </label>
-                        <label>
-                            <input type="radio" name="question30" value="opcion4"> Opción 4
-                        </label>
+                    <form class="answer" id="hotspot-q30-form">
+                        <!-- Zona de arrastre -->
+                        <div class="drag-zone">
+                            <div class="draggable" draggable="true" id="block1">Bloque 1</div>
+                            <div class="draggable" draggable="true" id="block2">Bloque 2</div>
+                            <div class="draggable" draggable="true" id="block3">Bloque 3</div>
+                        </div>
+                        
+                        <!-- Zonas de respuesta -->
+                        <div class="drop-zone-container">
+                            <div class="drop-zone" id="zone1"></div>
+                            <div class="drop-zone" id="zone2"></div>
+                            <div class="drop-zone" id="zone3"></div>
+                        </div>
+                        
+                        <!-- Botón para enviar -->
                         <button type="submit">Enviar</button>
+                        <button type="button" id="reset-btn">Reiniciar</button> <!-- Botón de reinicio -->
                     </form>
+                
                     <script>
-                        // Selecciona el formulario
-                        form = document.getElementById('question30-form');
-                    
-                        // Añade un evento para evitar la recarga de la página al enviar el formulario
-                        form.addEventListener('submit', function(event) {
-                            event.preventDefault(); // Evita el comportamiento por defecto del formulario
-                    
-                            // Aquí puedes agregar la lógica para procesar las respuestas o lo que necesites
-                            console.log('Formulario enviado sin recargar la página');
-                    
-                            // Opcional: si quieres actualizar algo en el chat o realizar otras acciones
-                            // Puedes agregar código aquí para manipular el DOM o enviar datos via AJAX, por ejemplo
+                        // Lógica Drag and Drop con verificación de zona ocupada    
+                        const draggables = document.querySelectorAll('.draggable');
+                        const dropZones = document.querySelectorAll('.drop-zone');
+                        const resetButton = document.getElementById('reset-btn'); // Botón de reinicio
+                        const dragZone = document.querySelector('.drag-zone'); // Zona de arrastre
+
+                        // Función para manejar el inicio del arrastre
+                        draggables.forEach(draggable => {
+                            draggable.addEventListener('dragstart', (event) => {
+                                event.dataTransfer.setData('text/plain', event.target.id);
+                            });
+                        });
+
+                        // Función para manejar el evento de "drop" (soltar) de un bloque en una zona
+                        dropZones.forEach(zone => {
+                            zone.addEventListener('dragover', (event) => {
+                                event.preventDefault(); // Permitir el "drop"
+                                zone.style.backgroundColor = "#b2ebf2"; // Cambiar color cuando el ratón está sobre la zona
+                            });
+
+                            zone.addEventListener('dragleave', () => {
+                                zone.style.backgroundColor = ""; // Restablecer el color cuando el ratón sale
+                            });
+
+                            zone.addEventListener('drop', (event) => {
+                                event.preventDefault(); // Prevenir el comportamiento por defecto
+
+                                const blockId = event.dataTransfer.getData('text/plain');
+                                const block = document.getElementById(blockId);
+
+                                // Verificar si la zona ya tiene un bloque
+                                if (zone.childElementCount === 0) {
+                                    zone.appendChild(block); // Mover el bloque a la zona de respuesta
+                                    zone.style.backgroundColor = ""; // Restablecer el color de la zona
+                                } else {
+                                    zone.style.backgroundColor = "#ffcccc"; // Color de advertencia si ya hay un bloque
+                                    setTimeout(() => {
+                                        zone.style.backgroundColor = ""; // Restablecer el color de advertencia
+                                    }, 500);
+                                }
+                            });
+                        });
+
+                        // Botón de reinicio para limpiar las zonas de respuesta y devolver los bloques
+                        resetButton.addEventListener('click', () => {
+                            // Limpiar las zonas de respuesta
+                            dropZones.forEach(zone => {
+                                while (zone.firstChild) {
+                                    zone.removeChild(zone.firstChild); // Eliminar los bloques de las zonas de respuesta
+                                }
+                                zone.style.backgroundColor = ""; // Restablecer el color de fondo
+                            });
+
+                            // Volver a colocar los bloques en su zona de arrastre
+                            draggables.forEach(block => {
+                                // Asegurarse de que el bloque está en la zona de arrastre
+                                if (!dragZone.contains(block)) {
+                                    dragZone.appendChild(block); // Moverlo a la zona de arrastre
+                                }
+                            });
                         });
                     </script>
-                </div><br>
+                </div>
+                <br>
                 <footer>
                     Web designed by Miguel Marañón Quero & Roberto García Moreno
                 </footer>
