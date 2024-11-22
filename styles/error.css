@@ -12,12 +12,17 @@ html, body {
     min-height: 100vh;
 }
 
-/* Cabecera */
 header {
     background-color: #007BFF;
     color: white;
     padding: 20px;
-    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header button {
@@ -45,7 +50,8 @@ main {
 /* Contenedor del formulario */
 .form-container {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 80px; /* Aumenta el padding para mayor espacio alrededor del formulario */
+    padding-left: 45px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -54,7 +60,7 @@ main {
 
 /* Estilos para los campos del formulario */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumenta el margen entre los campos */
 }
 
 .form-group label {
@@ -67,17 +73,19 @@ main {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Mayor padding para los campos */
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
     color: #333;
+    margin-top: 5px; /* Separación entre el label y el campo */
 }
 
 .form-group textarea {
     resize: vertical;
     min-height: 80px;
 }
+
 
 /* Estilo para el botón de envío */
 button[type="submit"] {
