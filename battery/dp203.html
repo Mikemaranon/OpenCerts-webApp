@@ -65,21 +65,16 @@
                         <label>
                             <input type="radio" name="question10" value="opcion4"> Opción 4
                         </label>
-                        <button type="submit">Enviar</button>
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>
                     </form>
                     <script>
-                        // Selecciona el formulario
                         let form = document.getElementById('question10-form');
                     
-                        // Añade un evento para evitar la recarga de la página al enviar el formulario
                         form.addEventListener('submit', function(event) {
-                            event.preventDefault(); // Evita el comportamiento por defecto del formulario
-                    
-                            // Aquí puedes agregar la lógica para procesar las respuestas o lo que necesites
+                            event.preventDefault();
                             console.log('Formulario enviado sin recargar la página');
-                    
-                            // Opcional: si quieres actualizar algo en el chat o realizar otras acciones
-                            // Puedes agregar código aquí para manipular el DOM o enviar datos via AJAX, por ejemplo
                         });
                     </script>
                 </div><br id="q20">
@@ -103,21 +98,16 @@
                         <label>
                             <input type="checkbox" name="question20" value="opcion4"> Opción 4
                         </label>
-                        <button type="submit">Enviar</button>
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>
                     </form>
                     <script>
-                        // Selecciona el formulario
                         form = document.getElementById('question20-form');
                     
-                        // Añade un evento para evitar la recarga de la página al enviar el formulario
                         form.addEventListener('submit', function(event) {
-                            event.preventDefault(); // Evita el comportamiento por defecto del formulario
-                    
-                            // Aquí puedes agregar la lógica para procesar las respuestas o lo que necesites
+                            event.preventDefault();
                             console.log('Formulario enviado sin recargar la página');
-                    
-                            // Opcional: si quieres actualizar algo en el chat o realizar otras acciones
-                            // Puedes agregar código aquí para manipular el DOM o enviar datos via AJAX, por ejemplo
                         });
                     </script>
                 </div><br>

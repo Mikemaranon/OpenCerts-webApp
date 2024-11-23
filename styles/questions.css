@@ -43,10 +43,17 @@
     width: auto;                        /* Permitir que el formulario ajuste su tamaño */
     margin: 0;                          /* Sin margen adicional */
 }
+
+.buttons {
+    display: flex;                      /* ponemos los botones en fila */
+    gap: 10px;                          /* separamos los botones */
+    align-items: left;                  /* alineamos horizontalmente */
+    padding-top: 10px;                  /* agregamos un poco de espacio entre las zonas y los botones */
+    margin-top: auto;                   /* empujamos los botones hacia abajo */
+}
     
 /* Botón de envío */
 .question form button {
-    margin-top: 15px;                   /* margen encima para dejar espacio */
     padding: 10px 20px;                 /* ampliamos la caja del botón para que ocupe más allá de solo texto */
     background-color: #007BFF; 
     color: white;
@@ -145,10 +152,3 @@
         transition: background-color 0.3s ease;
     }
 
-    .buttons {
-        display: flex;                  /* ponemos los botones en fila */
-        gap: 10px;                      /* separamos los botones */
-        align-items: left;              /* alineamos horizontalmente */
-        padding-top: 10px;              /* agregamos un poco de espacio entre las zonas y los botones */
-        margin-top: auto;               /* empujamos los botones hacia abajo */
-    }
