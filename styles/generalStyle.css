@@ -12,7 +12,7 @@ body {
 
 main {
     display: flex;
-    margin-top: 60px; /* Para evitar que el header se superponga al contenido */
+    margin-top: 60px;           /* Para evitar que el header se superponga al contenido */
     flex-grow: 1;
 }
 

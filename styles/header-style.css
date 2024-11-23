@@ -11,10 +11,10 @@ header {
     padding: 10px 20px;
     z-index: 10;
     overflow: hidden;
-    overflow-x: auto; /* Barra de desplazamiento horizontal */
-    white-space: nowrap; /* Evita que los elementos se envuelvan */
-    box-sizing: border-box; /* Considera el padding en el ancho total */
-    gap: 20px; /* Espacio entre los botones */
+    overflow-x: auto;                   /* barra de desplazamiento horizontal */
+    white-space: nowrap;                /* evita que los elementos se envuelvan */
+    box-sizing: border-box;             /* considera el padding en el ancho total */
+    gap: 20px;                          /* espacio entre los botones */
 }
 
 header h1 {
@@ -33,7 +33,7 @@ header h1 {
     .button-container {
         width: 33%;
         display: flex;
-        gap: 20px; /* Espacio entre los botones */
+        gap: 20px;                      /* espacio entre los botones */
         align-items: center;
     }
 
@@ -44,28 +44,29 @@ header h1 {
 
     .button1 button, .button2 button {
         padding: 10px 20px;
-        background-color: #003D73; /* Azul oscuro */
+        background-color: #003D73; 
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        width: 100%; /* Hace que el botón ocupe todo el ancho de su div */
+        width: 100%;                    /* hace que el botón ocupe todo el ancho de su div */
         font-size: 24px;
     }
 
-    .button1 button:hover, .button2 button:hover {
-        background-color: #1C5B90; /* Color al pasar el mouse */
+    .button1 button:hover, 
+    .button2 button:hover {
+        background-color: #1C5B90;    /* color al pasar el mouse */
     }
 
     .login-container {
         width: 33%;
         text-align: right;
-        padding-right: 10px; /* Desplazamos ligeramente el formulario hacia la izquierda */
+        padding-right: 10px;            /* desplazamos ligeramente el formulario hacia la izquierda */
     }
 
     .login-form {
         display: inline-block;
-        background-color: #0067B8; /* Azul más fuerte */
+        background-color: #0067B8;  
         right: 0px;
         padding: 10px;
         border-radius: 5px;
@@ -81,7 +82,7 @@ header h1 {
     .login-form button {
         padding: 5px 10px;
         border: none;
-        background-color: #003D73; /* Azul oscuro */
+        background-color: #003D73;  
         color: white;
         border-radius: 3px;
         cursor: pointer;

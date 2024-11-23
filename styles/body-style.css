@@ -1,7 +1,7 @@
 
 .center-section {
     background-color: white;
-    flex-grow: 1; /* La sección central ocupa el espacio restante */
+    flex-grow: 1;                       /* La sección central ocupa el espacio restante */
     margin: 20px;
     border-radius: 10px;
     display: flex;
