@@ -137,10 +137,10 @@
                             </div>
                     
                             <!-- Zona de respuesta -->
-                            <div class="drop-zone-container">
-                                <div class="drop-zone" id="zone1"></div>
-                                <div class="drop-zone" id="zone2"></div>
-                                <div class="drop-zone" id="zone3"></div>
+                            <div class="drop-zone">
+                                <div class="droppable" id="zone1"></div>
+                                <div class="droppable" id="zone2"></div>
+                                <div class="droppable" id="zone3"></div>
                             </div>
                         </div>
                     
@@ -154,7 +154,7 @@
                     <script>
                         // Lógica Drag and Drop con verificación de zona ocupada    
                         const draggables = document.querySelectorAll('.draggable');
-                        const dropZones = document.querySelectorAll('.drop-zone');
+                        const droppables = document.querySelectorAll('.droppable');
                         const resetButton = document.getElementById('reset-btn'); // Botón de reinicio
                         const dragZone = document.querySelector('.drag-zone'); // Zona de arrastre
 
@@ -166,7 +166,7 @@
                         });
 
                         // Función para manejar el evento de "drop" (soltar) de un bloque en una zona
-                        dropZones.forEach(zone => {
+                        droppables.forEach(zone => {
                             zone.addEventListener('dragover', (event) => {
                                 event.preventDefault(); // Permitir el "drop"
                                 zone.style.backgroundColor = "#b2ebf2"; // Cambiar color cuando el ratón está sobre la zona
@@ -198,7 +198,7 @@
                         // Botón de reinicio para limpiar las zonas de respuesta y devolver los bloques
                         resetButton.addEventListener('click', () => {
                             // Limpiar las zonas de respuesta
-                            dropZones.forEach(zone => {
+                            droppables.forEach(zone => {
                                 while (zone.firstChild) {
                                     zone.removeChild(zone.firstChild); // Eliminar los bloques de las zonas de respuesta
                                 }
