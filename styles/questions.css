@@ -1,59 +1,64 @@
  
-/* Estilo general para el div general (question) */
+/*
+    =======================================
+        Estilo general de las preguntas
+    =======================================
+*/
 .question {
-    background-color: #e0f7fa; /* Azul muy clarito */
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #e0f7fa; 
+    padding: 20px;                      /* evitamos que los elementos se peguen */
+    border-radius: 8px;                 /* esquina redondeada para el div */
     height: 100%;
-    margin-bottom: 20px; /* Espacio entre las preguntas */
-    max-width: 85%; /* El 85% del ancho de la sección central */
-    width: 100%; /* Ajusta esto según el ancho general que usas */
-    margin: 0 auto; /* Centrar horizontalmente */
-    box-sizing: border-box; /* Asegura que padding y border no alteren el ancho */
+    margin-bottom: 20px;                /* Espacio entre las preguntas */
+    width: 85%;                         /* ocupa un 85% del ancho de la seccion central */
+    margin: 0 auto;                     /* Centrar horizontalmente */
+    box-sizing: border-box;             /* Asegura que padding y border no alteren el ancho */
 }
 
-/* Estilo para el enunciado de la pregunta (h3) */
 .question h3 {
-    color: #333333; /* Gris oscuro, casi negro */
-    font-size: 1.25em;
-    margin-bottom: 10px; /* Espacio debajo del título */
+    color: #333333;
+    font-size: 1.25em;      
+    margin-bottom: 10px;                /* Espacio debajo del titulo */
 }
 
-/* Estilo para la descripción (p.description) */
 .question .description {
-    color: #555555; /* Gris medio para el texto descriptivo */
+    color: #555555; 
     font-size: 1em;
-    margin-bottom: 15px; /* Espacio debajo de la descripción */
+    margin-bottom: 15px;                /* Espacio debajo de la descripción */
 }
 
-/* Estilo general para el formulario dentro del div.question */
+/*
+    =====================================
+        Estilo general del formulario   
+    =====================================
+*/
 .question form {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     font-size: 1em;
     padding: 15px;
-    background-color: #f9f9f9; /* Fondo ligeramente más claro que blanco */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border: 1px solid #ddd; /* Borde sutil */
-    width: auto; /* Permitir que el formulario ajuste su tamaño */
-    margin: 0; /* Sin margen adicional */
+    background-color: #f9f9f9; 
+    border-radius: 8px;                 /* esquina redondeada para el form */
+    border: 1px solid #ddd;           /* Borde sutil */
+    width: auto;                        /* Permitir que el formulario ajuste su tamaño */
+    margin: 0;                          /* Sin margen adicional */
 }
     
 /* Botón de envío */
 .question form button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007BFF; /* Azul claro */
+    margin-top: 15px;                   /* margen encima para dejar espacio */
+    padding: 10px 20px;                 /* ampliamos la caja del botón para que ocupe más allá de solo texto */
+    background-color: #007BFF; 
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px;                 /* esquina redondeada para el boton */
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .question form button:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3; 
 }
 
 /*
@@ -61,27 +66,25 @@
         Preguntas de respuesta única
     =====================================
 */
-
-    /* Estilo para las etiquetas de las opciones */
     .question form label {
         display: block;
         margin-bottom: 10px;
         padding: 8px;
         border-radius: 5px; 
-        background-color: #e0f7fa; /* Azul clarito */
+        background-color: #e0f7fa; 
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
     
     .question form label:hover {
-        background-color: #b2ebf2; /* Azul un poco más oscuro al pasar el ratón */
+        background-color: #b2ebf2;
     }
     
     /* Estilo para los inputs */
     .question form input[type="radio"],
     .question form input[type="checkbox"] {
-        margin-right: 8px; /* Separación entre el input y el texto */
-        accent-color: #007BFF; /* Azul claro para personalizar los inputs */
+        margin-right: 8px; 
+        accent-color: #007BFF; 
     }
  
 /*
@@ -91,41 +94,38 @@
 */
     .question .hotspot {
         display: flex;
-        flex-direction: column; /* Organizar las secciones verticalmente */
-        gap: 15px; /* Espaciado entre las secciones */
+        flex-direction: column;         /* organizar las secciones verticalmente */
+        gap: 15px;                      /* espaciado entre las secciones */
         box-sizing: border-box;
     }
     
-    /* Contenedor principal reorganizado */
     .hotspot-container {
         display: flex;
-        justify-content: space-between; /* Distribuir las zonas a la izquierda y derecha */
-        gap: 20px; /* Espacio entre la zona de arrastre y las zonas de respuesta */
-        width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
+        justify-content: space-between; /* distribuimos las zonas a la izquierda y derecha */
+        gap: 20px;                      /* espacio entre la zona de arrastre y las zonas de respuesta */
+        width: 100%;                    /* aseguramos que ocupe todo el ancho disponible */
     }
 
-    .drag-zone-container {
-        display: flex; /* Colocar drag-zone y drop-zone-container en fila */
-        justify-content: space-between; /* Asegurar separación horizontal */
-        flex: 1; /* Hacer que ocupe todo el espacio disponible */
-        gap: 5%; /* Espaciado entre las zonas */
+    .drag-drop-zone-container {
+        display: flex;                  /* distribuimos las zonas a la izquierda y derecha */
+        justify-content: space-between; /* aseguramos separación horizontal */
+        flex: 1;                        /* hacer que ocupe todo el espacio disponible */
+        gap: 5%;                        /* espaciado entre las zonas */
     }
 
     /* Zona de arrastre */
     .drag-zone {
-        width: 40%; /* Ocupa el 40% del formulario */
+        width: 40%;                     /* ocupa el 40% del formulario */
     }
 
     /* Zona de respuesta */
     .drop-zone-container {
-        width: 50%; /* Ocupa el 50% del formulario */
+        width: 50%;                     /* ocupa el 50% del formulario */
     }
 
-
-    /* Esto debe garantizar que los bloques son visibles y accesibles */
     .drag-zone .draggable {
-        display: block; /* Aseguramos que los bloques sean visibles */
-        margin-bottom: 10px; /* Espacio entre los bloques */
+        display: block;                 /* aseguramos que los bloques sean visibles */
+        margin-bottom: 10px;            /* espacio entre los bloques */
     }
 
     /* Opciones arrastrables */
