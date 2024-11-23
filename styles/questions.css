@@ -6,7 +6,9 @@
     border-radius: 8px;
     margin-bottom: 20px; /* Espacio entre las preguntas */
     max-width: 85%; /* El 85% del ancho de la sección central */
+    width: 100%; /* Ajusta esto según el ancho general que usas */
     margin: 0 auto; /* Centrar horizontalmente */
+    box-sizing: border-box; /* Asegura que padding y border no alteren el ancho */
 }
 
 /* Estilo para el enunciado de la pregunta (h3) */
@@ -86,7 +88,12 @@
            Preguntas de Drag & Drop
     ======================================
 */
-
+    .question .hotspot {
+        display: flex;
+        justify-content: space-between; /* Asegura la separación */
+        align-items: flex-start; /* Opcional, alinear al inicio */
+        gap: 5%; /* Ajusta el espacio entre los divs */
+    }
     /* Contenedor principal reorganizado */
     .hotspot-container {
         display: flex;
