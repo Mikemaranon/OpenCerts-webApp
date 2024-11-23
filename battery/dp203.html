@@ -92,16 +92,16 @@
                     </p>
                     <form id="question20-form">
                         <label>
-                            <input type="radio" name="question20" value="opcion1"> Opción 1
+                            <input type="checkbox" name="question20" value="opcion1"> Opción 1
                         </label>
                         <label>
-                            <input type="radio" name="question20" value="opcion2"> Opción 2
+                            <input type="checkbox" name="question20" value="opcion2"> Opción 2
                         </label>
                         <label>
-                            <input type="radio" name="question20" value="opcion3"> Opción 3
+                            <input type="checkbox" name="question20" value="opcion3"> Opción 3
                         </label>
                         <label>
-                            <input type="radio" name="question20" value="opcion4"> Opción 4
+                            <input type="checkbox" name="question20" value="opcion4"> Opción 4
                         </label>
                         <button type="submit">Enviar</button>
                     </form>
@@ -125,28 +125,32 @@
                     <h3>Pregunta 30</h3>
                     <p class="description">
                         Arrastra los bloques azules a las zonas de respuesta correctas. Esto es solo una prueba de diseño.<br>
-                        sdfghjouyitdvptdpy8888888888888888888888888gvvvvvvvv
                     </p>
-                    <form class="hotspot" id="hotspot-q30-form">
-                        <!-- Zona de arrastre -->
-                        <div class="drag-zone">
-                            <div class="draggable" draggable="true" id="block1">Bloque 1</div>
-                            <div class="draggable" draggable="true" id="block2">Bloque 2</div>
-                            <div class="draggable" draggable="true" id="block3">Bloque 3</div>
+                    <form class="hotspot">
+                        <!-- Contenedor para las zonas de arrastre y respuesta -->
+                        <div class="drag-zone-container">
+                            <!-- Zona de arrastre -->
+                            <div class="drag-zone">
+                                <div class="draggable" draggable="true" id="block1">Bloque 1</div>
+                                <div class="draggable" draggable="true" id="block2">Bloque 2</div>
+                                <div class="draggable" draggable="true" id="block3">Bloque 3</div>
+                            </div>
+                    
+                            <!-- Zona de respuesta -->
+                            <div class="drop-zone-container">
+                                <div class="drop-zone" id="zone1"></div>
+                                <div class="drop-zone" id="zone2"></div>
+                                <div class="drop-zone" id="zone3"></div>
+                            </div>
                         </div>
-                        
-                        <!-- Zonas de respuesta -->
-                        <div class="drop-zone-container">
-                            <div class="drop-zone" id="zone1"></div>
-                            <div class="drop-zone" id="zone2"></div>
-                            <div class="drop-zone" id="zone3"></div>
+                    
+                        <!-- Botones en la parte inferior -->
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="reset-btn">Reiniciar</button>
                         </div>
-                        
-                        <!-- Botón para enviar -->
-                        <button type="submit">Enviar</button>
-                        <button type="button" id="reset-btn">Reiniciar</button> <!-- Botón de reinicio -->
                     </form>
-                
+                            
                     <script>
                         // Lógica Drag and Drop con verificación de zona ocupada    
                         const draggables = document.querySelectorAll('.draggable');

@@ -4,6 +4,7 @@
     background-color: #e0f7fa; /* Azul muy clarito */
     padding: 20px;
     border-radius: 8px;
+    height: 100%;
     margin-bottom: 20px; /* Espacio entre las preguntas */
     max-width: 85%; /* El 85% del ancho de la sección central */
     width: 100%; /* Ajusta esto según el ancho general que usas */
@@ -90,10 +91,11 @@
 */
     .question .hotspot {
         display: flex;
-        justify-content: space-between; /* Asegura la separación */
-        align-items: flex-start; /* Opcional, alinear al inicio */
-        gap: 5%; /* Ajusta el espacio entre los divs */
+        flex-direction: column; /* Organizar las secciones verticalmente */
+        gap: 15px; /* Espaciado entre las secciones */
+        box-sizing: border-box;
     }
+    
     /* Contenedor principal reorganizado */
     .hotspot-container {
         display: flex;
@@ -102,25 +104,23 @@
         width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
     }
 
-    /* Zona de opciones (izquierda) */
-    .drag-zone {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        left: 5px;
-        width: 40%;
-        flex: 1; /* Ocupa el 50% del espacio */
+    .drag-zone-container {
+        display: flex; /* Colocar drag-zone y drop-zone-container en fila */
+        justify-content: space-between; /* Asegurar separación horizontal */
+        flex: 1; /* Hacer que ocupe todo el espacio disponible */
+        gap: 5%; /* Espaciado entre las zonas */
     }
 
-    /* Zona de respuesta (derecha) */
-    .drop-zone-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        right: 5px;
-        width: 50%;
-        flex: 1; /* Ocupa el 50% del espacio */
+    /* Zona de arrastre */
+    .drag-zone {
+        width: 40%; /* Ocupa el 40% del formulario */
     }
+
+    /* Zona de respuesta */
+    .drop-zone-container {
+        width: 50%; /* Ocupa el 50% del formulario */
+    }
+
 
     /* Esto debe garantizar que los bloques son visibles y accesibles */
     .drag-zone .draggable {
@@ -147,9 +147,18 @@
         border: 2px dashed #888;
         background-color: #ffe4e1;
         display: flex;
+        margin-bottom: 10px; /* Espacio entre los bloques */
         justify-content: center;
         align-items: center;
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
 
+    /* Botones en la parte inferior */
+    .buttons {
+        display: flex; /* Poner los botones en fila */
+        gap: 10px;
+        align-items: left; /* Alinear verticalmente */
+        padding-top: 10px; /* Agregar un poco de espacio entre las zonas y los botones */
+        margin-top: auto; /* Empujar los botones hacia abajo */
+    }
