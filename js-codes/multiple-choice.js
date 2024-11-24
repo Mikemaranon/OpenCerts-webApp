@@ -1,11 +1,10 @@
-function sendSingleSelectResponse(questionId) {
+function sendMultipleChoiceResponse(questionId) {
     let form = document.getElementById(`${questionId}-form`);
-    let selectedOption = form.querySelector('input[type="radio"]:checked');
+    let selectedOptions = form.querySelectorAll('input[type="checkbox"]:checked');
+    let answers = Array.from(selectedOptions).map(option => option.value);
 
-    if (selectedOption) {
-        let answer = selectedOption.value;
-        
-        // Enviar la respuesta al servidor PHP
+    if (answers.length > 0) {
+        // Enviar las respuestas al servidor PHP
         fetch('validate_answer.php', {
             method: 'POST',
             headers: {
@@ -13,21 +12,21 @@ function sendSingleSelectResponse(questionId) {
             },
             body: JSON.stringify({
                 questionId: questionId,
-                answer: answer
+                answers: answers
             })
         })
         .then(response => response.json())
         .then(data => {
             if (data.isCorrect) {
-                alert('Respuesta correcta');
+                alert('Respuestas correctas');
             } else {
-                alert('Respuesta incorrecta');
+                alert('Algunas respuestas son incorrectas');
             }
         })
         .catch(error => {
             console.error('Error:', error);
         });
     } else {
-        alert('Por favor selecciona una opción');
+        alert('Por favor selecciona al menos una opción');
     }
-} 
+}

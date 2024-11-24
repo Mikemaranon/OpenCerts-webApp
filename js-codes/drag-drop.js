@@ -1,11 +1,17 @@
-function sendSingleSelectResponse(questionId) {
-    let form = document.getElementById(`${questionId}-form`);
-    let selectedOption = form.querySelector('input[type="radio"]:checked');
+function sendDragDropResponse(questionId) {
+    let form = document.querySelector(`#${questionId}-form`);
+    let droppedBlocks = form.querySelectorAll('.droppable');
 
-    if (selectedOption) {
-        let answer = selectedOption.value;
-        
-        // Enviar la respuesta al servidor PHP
+    let answers = [];
+    droppedBlocks.forEach(zone => {
+        let block = zone.firstChild ? zone.firstChild.id : null;
+        if (block) {
+            answers.push({ zone: zone.id, block: block });
+        }
+    });
+
+    if (answers.length > 0) {
+        // Enviar las respuestas al servidor PHP
         fetch('validate_answer.php', {
             method: 'POST',
             headers: {
@@ -13,7 +19,7 @@ function sendSingleSelectResponse(questionId) {
             },
             body: JSON.stringify({
                 questionId: questionId,
-                answer: answer
+                answers: answers
             })
         })
         .then(response => response.json())
@@ -28,6 +34,6 @@ function sendSingleSelectResponse(questionId) {
             console.error('Error:', error);
         });
     } else {
-        alert('Por favor selecciona una opción');
+        alert('Por favor arrastra los bloques a las zonas de respuesta');
     }
-} 
+}
