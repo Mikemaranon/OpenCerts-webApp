@@ -1,0 +1,102 @@
+/* Estilo exclusivo para la página de inicio */
+
+/* Header */
+header {
+    height: 75px; /* Aumenta la altura del header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Espaciado interno */
+    background-color: #4f94cf; /* Mantén o ajusta el color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional, agrega un sombreado */
+}
+
+header .title h1 {
+    margin: 0;
+    color: white;
+    margin-left: 5%;
+}
+
+header .title {
+    text-align: center;
+    flex-grow: 1;
+}
+
+header .button-container {
+    display: flex;
+    gap: 10px;
+}
+
+header .button-container button {
+    background-color: white;
+    color: rgb(107, 125, 184);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .button-container button:hover {
+    background-color: rgb(65, 90, 150);
+    color: white;
+}
+
+/* Main body content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.section-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo de cada div de examen */
+.exam-container {
+    background-color: rgb(240, 240, 250);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.exam-container:hover {
+    transform: scale(1.02);
+}
+
+.exam-container h1 {
+    font-size: 24px;
+    color: rgb(107, 125, 184);
+    margin: 0 0 10px 0;
+}
+
+.exam-container p {
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    margin-bottom: 15px;
+}
+
+.exam-container .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.exam-container .buttons button {
+    background-color: rgb(107, 125, 184);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exam-container .buttons button:hover {
+    background-color: rgb(65, 90, 150);
+}

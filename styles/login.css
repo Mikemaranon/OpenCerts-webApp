@@ -1,0 +1,93 @@
+/* Estilos exclusivos para la página de inicio de sesión */
+body {
+    background: url('background.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover;
+}
+  
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Capa blanca semitransparente */
+    backdrop-filter: blur(10px);            /* Efecto de desenfoque */
+    z-index: -1;                            /* Colocar detrás del contenido */
+}
+  
+/* Contenedor principal del formulario */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                        /* Ocupa toda la pantalla */
+}
+  
+/* Diseño del formulario */
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 320px;                         /* Ancho fijo del contenedor */
+    text-align: center;
+}
+  
+.login-container h1 {
+    font-size: 24px;
+    color: rgb(107, 125, 184);
+    margin-bottom: 20px;
+}
+  
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;                            /* Espaciado entre los elementos */
+}
+  
+.login-container label {
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+  
+.login-container input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  
+.login-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.login-container button:hover {
+    background-color: #0056b3;
+}
+  
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+#main-title {
+    font-size: 32px;
+    color: rgb(107, 125, 184);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+  
+#main-title:hover {
+    color: rgb(65, 90, 150);        /* Cambia el color al pasar el cursor */
+}
+  

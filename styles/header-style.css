@@ -7,7 +7,7 @@ header {
     left: 0;
     width: 100%;
     height: 75px;
-    background-color: #4A90E2; 
+    background-color: #4f94cf; 
     padding: 10px 20px;
     z-index: 10;
     overflow: hidden;
@@ -25,6 +25,7 @@ header h1 {
     width: 33%;
     position: relative;
     align-self: center;
+    margin-right: 15%;
 }
 
 @media (min-width: 1300px) {
@@ -36,15 +37,15 @@ header h1 {
         align-items: center;
     }
 
-    .button1, .button2 {
+    .button1, .button2, .button3 {
         margin: 0;
         display: flex;
     }
 
-    .button1 button, .button2 button {
+    .button1 button, .button2 button, .button3 button {
         padding: 10px 20px;
-        background-color: #003D73; 
-        color: white;
+        background-color: white;
+        color: rgb(103, 156, 255);
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -53,8 +54,10 @@ header h1 {
     }
 
     .button1 button:hover, 
-    .button2 button:hover {
-        background-color: #1C5B90;    /* color al pasar el mouse */
+    .button2 button:hover,
+    .button3 button:hover {
+        background-color: rgb(65, 90, 150);    /* color al pasar el mouse */
+        color: white;
     }
 
     .login-container {
@@ -107,13 +110,13 @@ header h1 {
 
 @media (max-width: 1300px) {
     .button-container, .login-container,
-    .button1, .button2 {
+    .button1, .button2, .button3{
         display: none;
     }
     
     .title {
         width: 100%;
         text-align: center;
-        padding-left: 0px;
+        margin-left: 18%;
     }
 }
