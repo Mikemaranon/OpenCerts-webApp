@@ -98,3 +98,9 @@ body::before {
 header:hover {
     background-color: rgba(159, 227, 248, 0.4);
 }
+
+footer {
+    padding: 10px;
+    color: grey;
+    text-align: center;
+}
