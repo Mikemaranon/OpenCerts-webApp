@@ -120,3 +120,11 @@ document.querySelectorAll('.drag-drop').forEach((form) => {
         allBlocks.forEach(block => dragZone.appendChild(block));
     });
 });
+
+
+document.querySelectorAll('.drag-drop').forEach((form) => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Formulario enviado sin recargar la página');
+    });
+})
