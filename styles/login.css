@@ -2,8 +2,19 @@
 body {
     background: url('background.jpg') no-repeat center center fixed; /* Imagen de fondo */
     background-size: cover;
+    overflow: hidden;
 }
   
+header {
+    background-color: rgba(0, 195, 255, 0.4); /* Blanco con opacidad del 80% */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    position: fixed; /* Para que se quede fijo en la parte superior al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Asegura que el header quede por encima de otros elementos */
+}
+
 body::before {
     content: "";
     position: absolute;
@@ -32,12 +43,6 @@ body::before {
     padding: 30px;
     width: 320px;                         /* Ancho fijo del contenedor */
     text-align: center;
-}
-  
-.login-container h1 {
-    font-size: 24px;
-    color: rgb(107, 125, 184);
-    margin-bottom: 20px;
 }
   
 .login-container form {
@@ -82,7 +87,7 @@ body::before {
   
 #main-title {
     font-size: 32px;
-    color: rgb(107, 125, 184);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -90,4 +95,6 @@ body::before {
 #main-title:hover {
     color: rgb(65, 90, 150);        /* Cambia el color al pasar el cursor */
 }
-  
+header:hover {
+    background-color: rgba(159, 227, 248, 0.4);
+}
