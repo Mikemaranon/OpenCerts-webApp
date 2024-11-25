@@ -69,14 +69,6 @@
                             <button type="submit">Enviar</button>
                         </div>
                     </form>
-                    <script>
-                        let form = document.getElementById('question10-form');
-                    
-                        form.addEventListener('submit', function(event) {
-                            event.preventDefault();
-                            console.log('Formulario enviado sin recargar la página');
-                        });
-                    </script>
                 </div><br id="q20">
                 <div class="question" id="question20">
                     <h3>Pregunta 20</h3>
@@ -102,14 +94,6 @@
                             <button type="submit">Enviar</button>
                         </div>
                     </form>
-                    <script>
-                        form = document.getElementById('question20-form');
-                    
-                        form.addEventListener('submit', function(event) {
-                            event.preventDefault();
-                            console.log('Formulario enviado sin recargar la página');
-                        });
-                    </script>
                 </div><br id="q30">
                 <div class="question">
                     <h3>Pregunta 30</h3>
@@ -185,7 +169,7 @@
                 <div class="chat-history" id="chat-history">
                     <!-- aquí se mostrarán los mensajes del chat -->
                 </div>
-                <div >
+                <div>
                     <form class="chat-input" action="#">
                         <input type="text" id="chat-message" placeholder="Escribe tu mensaje..." />
                         <button onclick="sendMessage()">Enviar</button>                   
@@ -193,6 +177,8 @@
                 </div>
             </section>
         </main>
+        <script src="../js-codes/multiple-choice.js"></script>
+        <script src="../js-codes/single-select.js"></script>
         <script src="../js-codes/chat.js"></script>
         <script src="../js-codes/drag-drop.js"></script>
     </body>
