@@ -30,3 +30,11 @@ function sendMultipleChoiceResponse(questionId) {
         alert('Por favor selecciona al menos una opción');
     }
 }
+
+document.querySelectorAll('.multiple-choice').forEach((form) => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Formulario enviado sin recargar la página');
+    });
+})
+                    

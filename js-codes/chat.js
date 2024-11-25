@@ -53,3 +53,10 @@ function getAIResponse(userMessage) {
         chatHistory.scrollTop = chatHistory.scrollHeight;
     }, 1000);
 }
+
+document.querySelectorAll('.chat-input').forEach((form) => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Formulario enviado sin recargar la página');
+    });
+})

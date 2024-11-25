@@ -31,3 +31,10 @@ function sendSingleSelectResponse(questionId) {
         alert('Por favor selecciona una opción');
     }
 } 
+
+document.querySelectorAll('.single-select').forEach((form) => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Formulario enviado sin recargar la página');
+    });
+})
