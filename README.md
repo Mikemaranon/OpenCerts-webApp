@@ -21,3 +21,11 @@ falladas, número de examenes realizados)
 Propiedades adicionales:
 - Base de datos donde subir documentación oficial y verificada 
 - Chatbot implementado usando la API gratuita de groq y alimentado con la documentación necesaria para poder asistir a los usuarios de forma flexible y adaptable.
+
+# Imágenes de muestra
+![image](https://github.com/user-attachments/assets/389a7a95-74ea-48ef-8bf3-15a876c8ec2b)
+![image](https://github.com/user-attachments/assets/2996097a-ea66-4fd2-b074-e33234de96f9)
+![image](https://github.com/user-attachments/assets/1df2ec67-7c66-452a-8b3e-ccbc35cc6850)
+![image](https://github.com/user-attachments/assets/7e4ff389-0663-47b9-8bc3-99f6c410309a)
+![image](https://github.com/user-attachments/assets/0f790b03-1c5c-4085-83e2-2ca6b6868285)
+
