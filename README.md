@@ -27,4 +27,5 @@ Propiedades adicionales:
 ![image](https://github.com/user-attachments/assets/2996097a-ea66-4fd2-b074-e33234de96f9)
 ![image](https://github.com/user-attachments/assets/1df2ec67-7c66-452a-8b3e-ccbc35cc6850)
 ![image](https://github.com/user-attachments/assets/7e4ff389-0663-47b9-8bc3-99f6c410309a)
+![image](https://github.com/user-attachments/assets/0f790b03-1c5c-4085-83e2-2ca6b6868285)
 
