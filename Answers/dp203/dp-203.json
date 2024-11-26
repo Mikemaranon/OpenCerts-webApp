@@ -1,0 +1,30 @@
+[
+    {
+        "id": 10,
+        "type": "single-select",
+        "question": "¿Cuál es la opción correcta?",
+        "options": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+        "answer": 2
+    },
+    {
+        "id": 20,
+        "type": "multiple-choice",
+        "question": "¿Cuáles son las opciones correctas?",
+        "options": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+        "answer": [1, 3]
+    },
+    {
+        "id": 30,
+        "type": "drag-drop",
+        "question": "¿Cuál es el orden de las respuestas?",
+        "options": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+        "answer": [4, 1, 2]
+    },
+    {
+        "id": 40,
+        "type": "drag-drop",
+        "question": "¿Cuál es el orden de las respuestas?",
+        "options": ["Opción 1", "Opción 2", "Opción 3"],
+        "answer": [3, 1]
+    }
+]
