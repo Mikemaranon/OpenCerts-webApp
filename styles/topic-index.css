@@ -1,19 +1,29 @@
-.left-section {
-    position: fixed;
-    top: 60px;
-    height: calc(100vh - 125px);
-    width: 300px;
-    left: 15px;
-    overflow-y: auto; /* Permite desplazarse cuando el contenido es demasiado grande */
-    max-height: 100%; /* Limitar el tamaño del historial visible */
-    background-color: #D0E5F1; /* Azul claro relajante */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efecto de flote */
-    margin-top: 30px; /* Separar de la parte superior */
-    max-width: 7cm;
-    padding: 10px;
-    z-index: 5;
-}   
+@media (min-width: 1200px) {
+    .left-section {
+        position: fixed;
+        top: 60px;
+        height: calc(100vh - 125px);
+        width: 300px;
+        left: 15px;
+        overflow-y: auto; /* Permite desplazarse cuando el contenido es demasiado grande */
+        max-height: 100%; /* Limitar el tamaño del historial visible */
+        background-color: #D0E5F1; /* Azul claro relajante */
+        border-radius: 15px; /* Bordes redondeados */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efecto de flote */
+        margin-top: 30px; /* Separar de la parte superior */
+        max-width: 7cm;
+        padding: 10px;
+        z-index: 5;
+    }   
+
+    .back-section-left {
+        width: 300px;
+        position: relative;
+        margin-top: 30px; /* Separar de la parte superior */
+        margin-left: 15px;  
+        max-width: 16.4%;
+    }
+}
 
 .topic-index {
     flex-grow: 1;
@@ -23,13 +33,6 @@
     margin-left: 15px;
 }
 
-.back-section-left {
-    width: 300px;
-    position: relative;
-    margin-top: 30px; /* Separar de la parte superior */
-    margin-left: 15px;
-    max-width: 6cm;
-}
 
 /* Estilo del índice */
 .topic-index h2 {
@@ -99,4 +102,10 @@ ul li a {
 
 ul li a:hover {
     color: #1C5B90; /* Color al pasar el mouse */
+}
+
+@media (max-width: 1200px) {
+    .left-section, .back-section-left {
+        display: none;
+    }   
 }

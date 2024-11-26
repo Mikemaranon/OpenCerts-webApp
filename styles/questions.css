@@ -16,7 +16,7 @@
     width: 85%;                         /* ocupa un 85% del ancho de la seccion central */
     margin: 0 auto;                     /* Centrar horizontalmente */
     box-sizing: border-box;             /* Asegura que padding y border no alteren el ancho */
-    margin-left: 40px;
+    margin-left: 7%;
 }
 
 .question h3 {

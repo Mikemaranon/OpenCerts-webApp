@@ -1,11 +1,15 @@
 
 .center-section {
-    background-color: white;
-    flex-grow: 1;                       /* La sección central ocupa el espacio restante */
+    position: relative;
+    width: 100%;
+    top: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    flex-grow: 1;                      /* La sección central ocupa el espacio restante */
     margin: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    height: auto;
     min-height: 100vh; 
 }
 
