@@ -1,9 +1,9 @@
 // Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
 
-    const jsonUrl = '../Answers/dp203/dp-203.json';
+    const jsonUrl = '../../Answers/dp203/dp-203.json'; // esta ruta tiene que ser una variable para poder usarse en distintos exámenes
 
-    fetch(jsonUrl) // esta ruta tiene que ser una variable para poder usarse en distintos exámenes
+    fetch(jsonUrl) 
         .then(response => {
             if (!response.ok) throw new Error('Error al cargar el JSON');
             return response.json();
@@ -41,6 +41,9 @@ function renderQuestions(jsonList) {
                         `
                             )
                             .join('')}
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>
                     </form>
                 </div>`;
                 break;
@@ -61,6 +64,9 @@ function renderQuestions(jsonList) {
                         `
                             )
                             .join('')}
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>  
                     </form>
                 </div>`;
                 break;
@@ -70,39 +76,51 @@ function renderQuestions(jsonList) {
                 <div class="question drag-drop" id="question${question.id}">
                     <h3>Pregunta ${question.id}</h3>
                     <p class="description">${question.question}</p>
-                    <div class="drag-drop-container">
-                        <div class="draggables">
-                            ${question.options
-                                .map(
-                                    (option, index) => `
-                                <div class="draggable" draggable="true" id="drag${question.id}-${index}">
-                                    ${option}
-                                </div>
-                            `
-                                )
-                                .join('')}
+                    <form class="drag-drop" id="question${question.id}">
+                        <div class="drag-drop-zone-container">
+                            <div class="drag-zone">
+                                ${question.options
+                                    .map(
+                                        (option, index) => `
+                                    <div class="draggable ${index + 1}" draggable="true" id="block${question.id}-${index + 1}">
+                                        ${option}
+                                    </div> 
+                                `
+                                    )
+                                    .join('')}
+                            </div>
+                            <div class="drop-zone">
+                                ${question.options
+                                    .map(
+                                        (_, index) => `
+                                    <div class="droppable" id="zone${index + 1}">
+                                        <!-- Drop here -->
+                                    </div>
+                                `
+                                    )
+                                    .join('')}
+                            </div>
                         </div>
-                        <div class="droppables">
-                            ${question.options
-                                .map(
-                                    (_, index) => `
-                                <div class="droppable" id="drop${question.id}-${index}">
-                                    <!-- Drop here -->
-                                </div>
-                            `
-                                )
-                                .join('')}
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="reset-btn" onclick="">Reiniciar</button>
                         </div>
-                    </div>
+                    </form>
                 </div>`;
                 break;
 
             default:
                 console.error(`Unknown question type: ${question.type}`);
         }
-
+        questionHTML += `<br>`
         // Añadir la pregunta generada al contenedor principal
-        // container.innerHTML += questionHTML;
-        mainContent.appendChild(questionHTML);
+        container.innerHTML += questionHTML;
     }
+
+    
+    questionHTML = ` <footer>
+        Web designed by Miguel Marañón Quero & Roberto García Moreno
+    </footer>`
+
+    container.innerHTML += questionHTML;
 }
