@@ -1,0 +1,151 @@
+                <br id="q10">
+                <div class="question" id="question10">
+                    <h3>Pregunta 10</h3>
+                    <p class="description">
+                        Esta pregunta tiene una descripción genérica, las respuestas aportadas no tienen ningún valor y
+                        por supuesto esto es solo una prueba.<br>
+                        Selecciona la opción correcta para completar la prueba
+                    </p>
+                    <form class="single-select" id="question10-form">
+                        <label>
+                            <input type="radio" name="question10" value="opcion1"> Opción 1
+                        </label>
+                        <label>
+                            <input type="radio" name="question10" value="opcion2"> Opción 2
+                        </label>
+                        <label>
+                            <input type="radio" name="question10" value="opcion3"> Opción 3
+                        </label>
+                        <label>
+                            <input type="radio" name="question10" value="opcion4"> Opción 4
+                        </label>
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div><br id="q20">
+                <div class="question" id="question20">
+                    <h3>Pregunta 20</h3>
+                    <p class="description">
+                        Esta pregunta tiene una descripción genérica, las respuestas aportadas no tienen ningún valor y
+                        por supuesto esto es solo una prueba.<br>
+                        Selecciona la opción correcta para completar la prueba
+                    </p>
+                    <form class="multiple-choice" id="question20-form">
+                        <label>
+                            <input type="checkbox" name="question20" value="opcion1"> Opción 1
+                        </label>
+                        <label>
+                            <input type="checkbox" name="question20" value="opcion2"> Opción 2
+                        </label>
+                        <label>
+                            <input type="checkbox" name="question20" value="opcion3"> Opción 3
+                        </label>
+                        <label>
+                            <input type="checkbox" name="question20" value="opcion4"> Opción 4
+                        </label>
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div><br id="q30">
+                <div class="question" id="question30">
+                    <h3>Pregunta 30</h3>
+                    <p class="description">
+                        Arrastra los bloques azules a las zonas de respuesta correctas. Esto es solo una prueba de diseño.<br>
+                    </p>
+                    <form class="drag-drop" id="question30-form">
+                        <div class="drag-drop-zone-container">
+                            <div class="drag-zone">
+                                <div class="draggable 1" draggable="true" id="block30-1">Bloque 1</div>
+                                <div class="draggable 2" draggable="true" id="block30-2">Bloque 2</div>
+                                <div class="draggable 3" draggable="true" id="block30-3">Bloque 3</div>
+                            </div>
+                    
+                            <div class="drop-zone">
+                                <div class="droppable" id="zone1"></div>
+                                <div class="droppable" id="zone2"></div>
+                                <div class="droppable" id="zone3"></div>
+                            </div>
+                        </div>
+                    
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="reset-btn" onclick="">Reiniciar</button>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div class="question" id="question40">
+                    <h3>Pregunta 40</h3>
+                    <p class="description">
+                        Arrastra los bloques azules a las zonas de respuesta correctas. Esto es solo una prueba de diseño.<br>
+                    </p>
+                    <form class="drag-drop" id="question40-form">
+                        <div class="drag-drop-zone-container">
+                            <div class="drag-zone">
+                                <div class="draggable 1" draggable="true" id="block40-1">Bloque 1</div>
+                                <div class="draggable 2" draggable="true" id="block40-2">Bloque 2</div>
+                                <div class="draggable 3" draggable="true" id="block40-3">Bloque 3</div>
+                            </div>
+                    
+                            <div class="drop-zone">
+                                <div class="droppable" id="zone1"></div>
+                                <div class="droppable" id="zone2"></div>
+                                <div class="droppable" id="zone3"></div>
+                            </div>
+                        </div>
+                    
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="reset-btn" onclick="">Reiniciar</button>
+                        </div>
+                    </form>
+                </div> 
+                <br>
+                <div class="question" id="question60">
+                    <h3>Pregunta 60</h3>
+                    <p class="description">¿Cuál es el orden de las respuestas?</p>
+                    <form class="drag-drop" id="question60">
+                        <div class="drag-drop-zone-container">
+                            <div class="drag-zone">
+                                
+                                    <div class="draggable 1" draggable="true" id="block60-1">
+                                        Opción 1
+                                    </div> 
+                                
+                                    <div class="draggable 2" draggable="true" id="block60-2">
+                                        Opción 2
+                                    </div> 
+                                
+                                    <div class="draggable 3" draggable="true" id="block60-3">
+                                        Opción 3
+                                    </div> 
+                                
+                                    <div class="draggable 4" draggable="true" id="block60-4">
+                                        Opción 4
+                                    </div> 
+                                
+                            </div>
+                            <div class="drop-zone">
+                                
+                                    <div class="droppable" id="zone1">
+                                    </div>
+                                
+                                    <div class="droppable" id="zone2">
+                                    </div>
+                                
+                                    <div class="droppable" id="zone3">
+                                    </div>
+                                
+                                    <div class="droppable" id="zone4">
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="reset-btn" onclick="">Reiniciar</button>
+                        </div>
+                    </form>
+                </div>

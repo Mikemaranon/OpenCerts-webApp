@@ -31,10 +31,13 @@ function sendMultipleChoiceResponse(questionId) {
     }
 }
 
-document.querySelectorAll('.multiple-choice').forEach((form) => {
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        console.log('Formulario enviado sin recargar la página');
+function ini_multipleChoice() {
+    document.querySelectorAll('.multiple-choice').forEach((form) => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            console.log('Formulario enviado sin recargar la página');
+        });
     });
-})
+}
+
                     

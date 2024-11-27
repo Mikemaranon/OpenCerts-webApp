@@ -123,4 +123,8 @@ function renderQuestions(jsonList) {
     </footer>`
 
     container.innerHTML += questionHTML;
+
+    ini_dragDrop();
+    ini_multipleChoice();
+    ini_singleSelect();
 }

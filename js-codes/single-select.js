@@ -32,9 +32,12 @@ function sendSingleSelectResponse(questionId) {
     }
 } 
 
-document.querySelectorAll('.single-select').forEach((form) => {
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        console.log('Formulario enviado sin recargar la página');
-    });
-})
+function ini_singleSelect() {
+    document.querySelectorAll('.single-select').forEach((form) => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            console.log('Formulario enviado sin recargar la página');
+        });
+    })
+}
+
