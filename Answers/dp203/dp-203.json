@@ -29,9 +29,15 @@
     },
     {
         "id": 50,
-        "type": "multiple-choice",
+        "type": "hot-spot",
         "question": "¿Cuáles son las opciones correctas?",
-        "options": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
-        "answer": [2, 4]
+        "options": {
+            "ejemplo 1": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+            "ejemplo 2": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"]
+        },
+        "answer": {
+            "ejemplo 1": "Opción 3",
+            "ejemplo 2": "Opción 1"
+        }
     }
 ]

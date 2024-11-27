@@ -109,6 +109,35 @@ function renderQuestions(jsonList) {
                 </div>`;
                 break;
 
+            case 'hot-spot':
+                questionHTML = `
+                <div class="question" id="question${question.id}">
+                    <h3>Pregunta ${question.id}</h3>
+                    <p class="description">${question.question}</p>
+                    <form class="hot-spot" id="question${question.id}-form">
+                        ${Object.keys(question.options)
+                            .map(
+                                (key, index) => `
+                            <label class="margin-label">${key}
+                            <select name="question[${index + 1}]" id="select[${index + 1}]">
+                                ${question.options[key]
+                                    .map(
+                                        (option, subIndex) => `
+                                    <option value="opcion${subIndex + 1}">${option}</option>
+                                `
+                                    )
+                                    .join('')}
+                            </select></label>
+                        `
+                            )
+                            .join('')}
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>`;
+                break;
+
             default:
                 console.error(`Unknown question type: ${question.type}`);
         }
@@ -127,4 +156,5 @@ function renderQuestions(jsonList) {
     ini_dragDrop();
     ini_multipleChoice();
     ini_singleSelect();
+    ini_hotSpot();
 }
