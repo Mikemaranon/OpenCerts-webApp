@@ -73,7 +73,7 @@ function renderQuestions(jsonList) {
 
             case 'drag-drop':
                 questionHTML = `
-                <div class="question drag-drop" id="question${question.id}">
+                <div class="question" id="question${question.id}">
                     <h3>Pregunta ${question.id}</h3>
                     <p class="description">${question.question}</p>
                     <form class="drag-drop" id="question${question.id}">

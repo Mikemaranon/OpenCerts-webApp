@@ -98,12 +98,12 @@
                         </div>
                     </form>
                 </div><br id="q30">
-                <div class="question">
+                <div class="question" id="question30">
                     <h3>Pregunta 30</h3>
                     <p class="description">
                         Arrastra los bloques azules a las zonas de respuesta correctas. Esto es solo una prueba de diseño.<br>
                     </p>
-                    <form class="drag-drop" id="question30">
+                    <form class="drag-drop" id="question30-form">
                         <div class="drag-drop-zone-container">
                             <div class="drag-zone">
                                 <div class="draggable 1" draggable="true" id="block30-1">Bloque 1</div>
@@ -125,12 +125,12 @@
                     </form>
                 </div>
                 <br>
-                <div class="question">
+                <div class="question" id="question40">
                     <h3>Pregunta 40</h3>
                     <p class="description">
                         Arrastra los bloques azules a las zonas de respuesta correctas. Esto es solo una prueba de diseño.<br>
                     </p>
-                    <form class="drag-drop" id="question40">
+                    <form class="drag-drop" id="question40-form">
                         <div class="drag-drop-zone-container">
                             <div class="drag-zone">
                                 <div class="draggable 1" draggable="true" id="block40-1">Bloque 1</div>
@@ -150,7 +150,55 @@
                             <button type="button" id="reset-btn" onclick="">Reiniciar</button>
                         </div>
                     </form>
-                </div> -->
+                </div> 
+                <br>
+                <div class="question" id="question60">
+                    <h3>Pregunta 60</h3>
+                    <p class="description">¿Cuál es el orden de las respuestas?</p>
+                    <form class="drag-drop" id="question60">
+                        <div class="drag-drop-zone-container">
+                            <div class="drag-zone">
+                                
+                                    <div class="draggable 1" draggable="true" id="block60-1">
+                                        Opción 1
+                                    </div> 
+                                
+                                    <div class="draggable 2" draggable="true" id="block60-2">
+                                        Opción 2
+                                    </div> 
+                                
+                                    <div class="draggable 3" draggable="true" id="block60-3">
+                                        Opción 3
+                                    </div> 
+                                
+                                    <div class="draggable 4" draggable="true" id="block60-4">
+                                        Opción 4
+                                    </div> 
+                                
+                            </div>
+                            <div class="drop-zone">
+                                
+                                    <div class="droppable" id="zone1">
+                                    </div>
+                                
+                                    <div class="droppable" id="zone2">
+                                    </div>
+                                
+                                    <div class="droppable" id="zone3">
+                                    </div>
+                                
+                                    <div class="droppable" id="zone4">
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button type="submit">Enviar</button>
+                            <button type="button" id="reset-btn" onclick="">Reiniciar</button>
+                        </div>
+                    </form>
+                </div>
+            -->
                 <br>
             </section>    
             <section class="back-section-right"></section>
@@ -166,12 +214,12 @@
                         <input type="text" id="chat-message" placeholder="Escribe tu mensaje..." />
                         <button onclick="sendMessage()">Enviar</button>                   
                     </form>
-                </div>
+                </div> 
             </section>
         </main>
-        <script src="../../js-codes/multiple-choice.js"></script>
-        <script src="../../js-codes/single-select.js"></script>
-        <script src="../../js-codes/chat.js"></script>
-        <script src="../../js-codes/drag-drop.js"></script>
     </body>
+    <script src="../../js-codes/multiple-choice.js"></script>
+    <script src="../../js-codes/single-select.js"></script>
+    <script src="../../js-codes/chat.js"></script>
+    <script src="../../js-codes/drag-drop.js"></script>
 </html>
