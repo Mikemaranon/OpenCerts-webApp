@@ -2,15 +2,17 @@
     {
         "id": 1,
         "type": "single-select",
-        "question": [
-            "You have a table in an Azure Synapse Analytics dedicated SQL pool. The table was created by using the following Transact-SQL statement.<br><br>",
-            "<img src='../../Answers/dp203/images/T1P1.png'><br><br>",
-            "You need to alter the table to meet the following requirements:<br>",
-            "<ul ><li>Ensure that users can identify the current manager of employees.</li>",
-            "<li>Support creating an employee reporting hierarchy for your entire company.</li>",
-            "<li>Provide fast lookup of the managers' attributes such as name and job title.</li></ul>",
-            "Which column should you add to the table?"
-        ],
+        "question": {
+            "desc_1": "You have a table in an Azure Synapse Analytics dedicated SQL pool. The table was created by using the following Transact-SQL statement.",
+            "img_1": "../../Answers/dp203/images/T1P1.png",
+            "desc_2": "You need to alter the table to meet the following requirements:",
+            "u_list": [
+                "Ensure that users can identify the current manager of employees.",
+                "Support creating an employee reporting hierarchy for your entire company.",
+                "Provide fast lookup of the managers' attributes such as name and job title."
+            ],
+            "desc_3": "Which column should you add to the table?"
+        },
         "options": [
             "[ManagerEmployeeID] [smallint] NULL", 
             "[ManagerEmployeeKey] [smallint] NULL", 

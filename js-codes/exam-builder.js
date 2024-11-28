@@ -26,11 +26,31 @@ function renderQuestions(jsonList) {
 
         switch (question.type) {
             case 'single-select':
-                const questionContent = question.question.join("");
+                let questionContent = '';
+
+                // Procesamos el contenido de la pregunta basado en las claves desc1, desc2, etc.
+                Object.keys(question.question).forEach(key => {
+                    if (key.startsWith('desc')) {
+                        // Añadimos el contenido de las descripciones dentro de un <p class="description">
+                        questionContent += `<p class="description">${question.question[key]}</p>`;
+                    }
+                    if (key.startsWith('img')) {
+                        // Añadimos la imagen dentro de un <img>
+                        questionContent += `<img src="${question.question[key]}" />`;
+                    }
+                    if (key === 'u_list') {
+                        // Creamos una lista <ul> para los elementos de la lista u-list
+                        questionContent += `<ul class="u_list">`;
+                        question.question[key].forEach(item => {
+                            questionContent += `<li>${item}</li>`;
+                        });
+                        questionContent += `</ul>`;
+                    }
+                });
                 questionHTML = `
                 <div class="question" id="question${question.id}">
-                    <h3>Pregunta ${question.id}</h3>
-                    <p class="description">${questionContent}</p>
+                    <h1>Pregunta ${question.id}</h1><br>
+                    ${questionContent}<br>
                     <form class="single-select" id="question${question.id}-form">
                         ${question.options
                             .map(
