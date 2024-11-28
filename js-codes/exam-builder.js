@@ -26,10 +26,11 @@ function renderQuestions(jsonList) {
 
         switch (question.type) {
             case 'single-select':
+                const questionContent = question.question.join("");
                 questionHTML = `
                 <div class="question" id="question${question.id}">
                     <h3>Pregunta ${question.id}</h3>
-                    <p class="description">${question.question}</p>
+                    <p class="description">${questionContent}</p>
                     <form class="single-select" id="question${question.id}-form">
                         ${question.options
                             .map(
