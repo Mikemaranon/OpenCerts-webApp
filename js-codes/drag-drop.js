@@ -111,6 +111,25 @@ function ini_dragDrop() {
                 }
             });
         });
+
+        // Configurar eventos para que los draggables puedan volver a la dragzone
+        dragZone.addEventListener('dragover', (event) => {
+            event.preventDefault(); // Permitir el evento de drop en la dragzone
+        });
+    
+        dragZone.addEventListener('dragleave', () => {
+            dragZone.style.backgroundColor = ''; // Restaurar estilo
+        });
+    
+        dragZone.addEventListener('drop', (event) => {
+            event.preventDefault();
+            const blockId = event.dataTransfer.getData('text/plain');
+            const block = document.getElementById(blockId);
+    
+            // Devolver el bloque a la dragzone
+            dragZone.appendChild(block);
+            dragZone.style.backgroundColor = ''; // Restaurar estilo
+        });
     
         // Configurar el botón de reinicio
         resetButton.addEventListener('click', () => {
