@@ -62,4 +62,25 @@
         ],
         "answer": [4, 1, 3]
     }
+    ,
+    {
+        "id": 4,
+        "type": "drag-drop",
+        "question": {
+            "desc_1": "prueba ",
+            "u_list": [
+                "11111111",
+                "2222222222",
+                "C22222222233333333s"
+            ],
+            "desc_2": "haz la pregunta"
+        },
+        "options": [
+            "bbbbbbbbbbbbbbbbbbbbbbbbb", 
+            "aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa",
+            "cccccccccccccccccccccccc ccccccccccccccccccccc",
+            "safdadsasdgadfgaAS)"
+        ],
+        "answer": [4, 1, 3]
+    }
 ]
