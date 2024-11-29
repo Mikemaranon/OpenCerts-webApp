@@ -20,5 +20,46 @@
             "[ManagerName] [varchar](200) NULL"
         ],
         "answer": 3
+    },
+    {
+        "id": 2,
+        "type": "single-select",
+        "question": {
+            "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
+            "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
+            "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
+            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
+            "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
+            "desc_4": "What will be returned by the query?"
+        },
+        "options": [
+            "24", 
+            "an error", 
+            "a null value"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 3,
+        "type": "drag-drop",
+        "question": {
+            "desc_1": "You have a table named SalesFact in an enterprise data warehouse in Azure Synapse Analytics. SalesFact contains sales data from the past 36 months and has the following characteristics:",
+            "u_list": [
+                "Is partitioned by month",
+                "Contains one billion rows",
+                "Contains one billion rows"
+            ],
+            "desc_2": "At the beginning of each month, you need to remove data from SalesFact that is older than 36 months as quickly as possible. Which three actions should you perform in sequence in a stored procedure? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br>Select and Place:"
+        },
+        "options": [
+            "Switch the partition containing the stale data from SalesFact to SalesFact_Work", 
+            "Truncate the partition containing the stale data", 
+            "Drop the SalesFact_Work table", 
+            "Create an empty table named SalesFact_Work that has the same schema as SalesFact",
+            "Execute a DELETE statemen where the value in the Date column is more than 36 months ago",
+            "Copy the data to a new table by using CREATE TABLE AS SELECT(CTAS)"
+        ],
+        "answer": [4, 1, 3]
     }
 ]

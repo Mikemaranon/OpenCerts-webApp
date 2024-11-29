@@ -39,6 +39,17 @@ function sendDragDropResponse(questionId) {
 }
 
 function ini_dragDrop() {
+
+    let draggableHeight = '';
+    const divs = document.querySelectorAll('.draggable');
+       
+    divs.forEach(div => {
+        div.addEventListener('mouseover', function() {
+            draggableHeight = this.offsetHeight;
+            console.log(draggableHeight);
+        });
+    });
+
     document.querySelectorAll('.drag-drop').forEach((form) => {
         const draggables = form.querySelectorAll('.draggable');
         const droppables = form.querySelectorAll('.droppable');
@@ -67,11 +78,14 @@ function ini_dragDrop() {
         droppables.forEach(zone => {
             zone.addEventListener('dragover', (event) => {
                 event.preventDefault(); // Permitir el evento drop
-                zone.style.backgroundColor = '#b2ebf2'; // Indicar visualmente que el droppable está activo
+                zone.style.backgroundColor = 'white'; // Indicar visualmente que el droppable está activo
+                zone.style.border = 'white';
+                zone.style.height = block.offsetHeight + 'px';
             });
-    
+
             zone.addEventListener('dragleave', () => {
                 zone.style.backgroundColor = ''; // Restaurar el color cuando el ratón salga de la zona
+                zone.style.minHeight = '40px'; // Restaurar altura original
             });
     
             zone.addEventListener('drop', (event) => {
@@ -102,7 +116,7 @@ function ini_dragDrop() {
         resetButton.addEventListener('click', () => {
             // Obtener todos los bloques de la zona de arrastre y de las zonas de respuesta
             const allBlocks = Array.from(form.querySelectorAll('.draggable'));
-    
+            
             // Ordenar los bloques por el número detrás del guion en su atributo id
             allBlocks.sort((a, b) => {
                 const numA = parseInt(a.id.split('-')[1], 10);
@@ -115,6 +129,7 @@ function ini_dragDrop() {
                 while (zone.firstChild) {
                     dragZone.appendChild(zone.firstChild);
                 }
+                zone.style.minHeight = '40px'; // Restaurar altura original
             });
     
             // Reordenar los bloques en la zona de arrastre

@@ -149,3 +149,33 @@
                         </div>
                     </form>
                 </div>
+
+
+
+
+
+
+                        droppables.forEach(zone => {
+            zone.addEventListener('dragover', (event) => {
+                event.preventDefault(); // Permitir el evento drop
+                zone.style.backgroundColor = 'white'; // Indicar visualmente que el droppable está activo
+                zone.style.border = 'white';
+                zone.style.height = draggableHeight + 'px';
+            });
+    
+            zone.addEventListener('dragleave', () => {
+                zone.style.backgroundColor = ''; // Restaurar el color cuando el ratón salga de la zona
+                zone.style.border = ''; // Restaurar el borde original
+                zone.style.height = ''; // Restaurar altura original
+            });
+    
+
+        let draggableHeight = '';
+    const divs = document.querySelectorAll('.draggable');
+       
+    divs.forEach(div => {
+        div.addEventListener('mouseover', function() {
+            draggableHeight = this.offsetHeight;
+            console.log(draggableHeight);
+        });
+    });
