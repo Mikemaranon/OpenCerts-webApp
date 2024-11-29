@@ -46,8 +46,16 @@
     margin-top: 3%;
 }
 
+@font-face {
+    font-family: 'consoles'; /* Nombre que usarás en tu CSS */
+    src: url('/fonts/CONSOLAB.ttf') format('truetype');
+    font-weight: normal; /* Define el grosor */
+    font-style: normal; /* Define el estilo */
+}
+
 .question .code {
     border-radius: 15px; /* Bordes redondeados */
+    font-family: "consoles";
     margin: 5%;
     color: white;
     padding: 10px;
