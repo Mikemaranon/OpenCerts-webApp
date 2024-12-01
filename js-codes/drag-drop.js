@@ -46,7 +46,7 @@ function ini_dragDrop() {
     divs.forEach(div => {
         div.addEventListener('mouseover', function() {
             draggableHeight = this.offsetHeight;
-            console.log(draggableHeight);
+            // console.log(draggableHeight);
         });
     });
 
