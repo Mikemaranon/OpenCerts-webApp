@@ -150,11 +150,6 @@
                     </form>
                 </div>
 
-
-
-
-
-
                         droppables.forEach(zone => {
             zone.addEventListener('dragover', (event) => {
                 event.preventDefault(); // Permitir el evento drop
@@ -179,68 +174,3 @@
             console.log(draggableHeight);
         });
     });
-
-
-
-        let indexHTML = `
-        <div class="topic-index">
-            <h2>Índice</h2><br>
-            <ul>
-            <li><a href="#t1" id="t1">Tema 1</a>
-                <ul class="sublist">
-    `;
-    let topic = 1;
-
-            
-        // Generamos índices por temas para cada 10 preguntas
-        if ((question.id == 1 || question.id%10 == 0) && question.topic == topic) {
-            indexHTML += `
-                <li><a href="#t${question.topic}q${question.id}">Pregunta ${question.id}</a></li>
-            `;
-        } else {
-            if (i == jsonList.length) {
-                indexHTML += `
-                    </ul></li></div>
-                `;
-            } else {
-                topic = question.topic;
-                indexHTML += `
-                    </ul></li>
-                    <li><a href="#t${question.topic}" id="t${question.topic}">Tema ${question.topic}</a>
-                        <ul class="sublist">
-                `;
-            }
-        }
-
-        
-
-                        <ul>
-                            <li><a href="#">Tema 1</a>
-                                <ul class="sublist">
-                                    <li><a href="#q10">Pregunta 10</a></li>
-                                    <li><a href="#q20">Pregunta 20</a></li>
-                                    <li><a href="#q30">Pregunta 30</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-
-
-                        
-        <ul>
-            <li><a href="#t1q1" id="t1">Topic 1</a>
-                <ul class="sublist">
-
-
-
-1. ul
--------------------------
-2.   li, a, ul              TEMA
-3.      li, a, /li  ...x    PREGUNTA
-4.   /ul /li                CIERRA TEMA
--------------------------
-2.   li, a, ul              TEMA
-3.      li, a, /li  ...x    PREGUNTA
-4.   /ul /li                CIERRA TEMA
--------------------------
-5. /ul

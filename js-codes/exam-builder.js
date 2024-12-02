@@ -1,7 +1,8 @@
 // Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
 
-    const jsonUrl = '../../Answers/dp203/dp-203.json'; // esta ruta tiene que ser una variable para poder usarse en distintos exámenes
+    jsonUrl = document.querySelector(".jsonDirectory").innerHTML;
+    console.log(jsonUrl)
 
     fetch(jsonUrl) 
         .then(response => {
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
         });
 });
-
 
 function renderQuestions(jsonList) {
     const container = document.querySelector('.center-section'); // Contenedor de las preguntas
@@ -212,6 +212,30 @@ function renderQuestions(jsonList) {
                 break;
 
             case 'hot-spot':
+                questionContent = '';
+
+                // Procesamos el contenido de la pregunta basado en las claves desc1, desc2, etc.
+                Object.keys(question.question).forEach(key => {
+                    if (key.startsWith('desc')) {
+                        // Añadimos el contenido de las descripciones dentro de un <p class="description">
+                        questionContent += `<p class="description">${question.question[key]}</p>`;
+                    }
+                    if (key.startsWith('img')) {
+                        // Añadimos la imagen dentro de un <img>
+                        questionContent += `<img src="${question.question[key]}" />`;
+                    }
+                    if (key === 'u_list') {
+                        // Creamos una lista <ul> para los elementos de la lista u-list
+                        questionContent += `<ul class="u_list">`;
+                        question.question[key].forEach(item => {
+                            questionContent += `<li>${item}</li>`;
+                        });
+                        questionContent += `</ul>`;
+                    }
+                    if (key.startsWith('code')) {
+                        questionContent += `<div class="code">${question.question[key]}</div>`;
+                    }
+                });
                 questionHTML = `
                 <br id="t${question.topic}q${question.id}">
                 <div class="question" id="question${question.id}">
@@ -250,7 +274,6 @@ function renderQuestions(jsonList) {
 
         questionHTML = '';
     }
-
     
     questionHTML = `<footer>
         Web designed by Miguel Marañón Quero & Roberto García Moreno
@@ -266,4 +289,5 @@ function renderQuestions(jsonList) {
     ini_multipleChoice();
     ini_singleSelect();
     ini_hotSpot();
+    ini_searchTag();
 }

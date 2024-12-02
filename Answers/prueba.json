@@ -11,7 +11,10 @@
         "type": "multiple-choice",
         "question": "¿Cuáles son las opciones correctas?",
         "options": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
-        "answer": [1, 3]
+        "answer": [1, 3],
+        "tags": [
+            "parquet", "avro"
+        ]
     },
     {
         "id": 30,

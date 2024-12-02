@@ -177,5 +177,17 @@
             "a null value"
         ],
         "topic": 2
+    },
+    {
+        "id": 60,
+        "type": "hot-spot",
+        "question": {
+            "desc_1": "¿Cuáles son las opciones correctas?"
+        },
+        "options": {
+            "ejemplo 1": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+            "ejemplo 2": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"]
+        },
+        "topic": 2
     }
 ]

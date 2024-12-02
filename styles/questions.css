@@ -1,8 +1,82 @@
- 
+.jsonDirectory {
+    display: none;
+}
+
 .title {
     margin-left: 22%;
 }
 
+.searchdiv {
+    background-color: #4f94cf; 
+    width: 100%;                         /* ocupa un 85% del ancho de la seccion central */
+    color: white;
+    padding: 20px;                      /* evitamos que los elementos se peguen */
+    align-items: center;
+    border-radius: 8px;   
+    box-sizing: border-box;             /* Asegura que padding y border no alteren el ancho */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.searchdiv h2 {
+    width: 50%;
+    margin-top: -0px;
+    margin-left: -3%;
+    font-size: 200%;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.searchdiv input {
+    border-radius: 8px;
+    height: 40px;
+    border:rgba(255, 236, 236, 0.8);
+    padding-left: 12px;
+}
+
+.search-container {
+    background-color: none;
+    float: right;
+    margin-top: -63px;
+    width: 50%;
+}
+
+.search-container button {
+    width: 20%;
+    height: 41px;
+    background-color: #85aedd;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #1C5B90;
+}
+
+.tags-container {
+    margin-bottom: -14px;
+    background-color: #dbf9f9;
+    min-height: 40px;
+    border-radius: 8px;  
+    padding: 5px;   
+    display: flex; 
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.dynamic-div {
+    padding: 10px;
+    background-color:#007BFF;  
+    border-radius: 5px;  
+    width: auto;
+    margin: 5px;
+}
+
+.dynamic-div:hover {
+    background-color:#1C5B90;  
+    cursor: pointer;
+}
 /*
     =======================================
         Estilo general de las preguntas
@@ -22,7 +96,7 @@
 .question h1 {
     color: #333333;
     font-size: 2.25em;      
-    margin-bottom: 1%;                /* Espacio debajo del titulo */
+    margin-bottom: 1%;                  /* Espacio debajo del titulo */
     margin-left: 3%;
     text-shadow: 2px 2px 4px rgba(82, 82, 82, 0.1);
 }
@@ -88,7 +162,7 @@
     margin: 0;                          /* Sin margen adicional */
 }
 
-.buttons {
+.question .buttons {
     display: flex;                      /* ponemos los botones en fila */
     gap: 10px;                          /* separamos los botones */
     align-items: left;                  /* alineamos horizontalmente */
