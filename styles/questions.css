@@ -1,4 +1,5 @@
-.jsonDirectory {
+.jsonDirectory,
+.jsonDirectoryTags {
     display: none;
 }
 

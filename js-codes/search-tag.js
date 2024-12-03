@@ -15,7 +15,7 @@ function ini_searchTag() {
             newDiv.textContent = text; // Establece el texto
 
             // Añade evento para eliminar al hacer doble clic
-            newDiv.addEventListener('dblclick', () => {
+            newDiv.addEventListener('click', () => {
               container.removeChild(newDiv); // Elimina el div del contenedor
             });
           
@@ -47,6 +47,21 @@ $(document).ready(function() {
         placeholder: "Select an option",
         width: "150px",
         height: "80px",
-        allowClear: true
+        allowClear: true,
+        borderRadius: "10px",  
     });
 });
+
+const selectElement = document.getElementById('searchable-select');
+
+function setTagSelector(data) {
+    // Iterar sobre el JSON y agregar opciones al <select>
+    data.forEach(item => {
+        if (item !== "") { // Ignorar valores vacíos
+            const option = document.createElement('option');
+            option.value = item; // Asignar el valor
+            option.textContent = item; // Asignar el texto visible
+            selectElement.appendChild(option); // Añadir al <select>
+        }
+    });
+}

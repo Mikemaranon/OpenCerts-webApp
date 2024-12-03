@@ -18,6 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error:', error);
         });
+
+    
+    tags = document.querySelector(".jsonDirectoryTags").innerHTML;
+
+    // Cargar el JSON y procesarlo
+    fetch(tags)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error al cargar el JSON: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            setTagSelector(data);
+        })
+        .catch(error => {
+            console.error('Error al procesar el JSON:', error);
+        });
+
 });
 
 function recallQuestions() {
