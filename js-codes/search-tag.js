@@ -1,7 +1,7 @@
 let tag_list = [];
 
 function ini_searchTag() {
-    const input = document.getElementById('textInput');
+    const input = document.getElementById('searchable-select');
     const button = document.getElementById('addButton');
     const container = document.getElementById('container');
     
@@ -41,3 +41,12 @@ function refreshTags() {
     }
     recallQuestions();
 }
+
+$(document).ready(function() {
+    $('#searchable-select').select2({
+        placeholder: "Select an option",
+        width: "150px",
+        height: "80px",
+        allowClear: true
+    });
+});
