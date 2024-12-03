@@ -19,11 +19,16 @@
         <script defer src="../../js-codes/exam-builder.js"></script>
 
         <style>
+            .select2-results__option {
+                transition: none !important; /* Desactiva transiciones */
+                transform: scale(1) !important; /* Forza que el tamaño sea constante */
+                padding: 8px !important; /* Ajusta el padding para evitar cambios */
+            }
+
             .select2-results__option:hover,
             .select2-results__option--highlighted {
-                color: inherit !important;
-                cursor: default;
-                height: auto !important;
+                transform: scale(1) !important; /* Asegura que no crezca en hover */
+                padding: 8px !important; /* Evita ajustes visuales */
             }
         </style>
         
