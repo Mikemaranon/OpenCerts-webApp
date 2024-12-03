@@ -47,7 +47,7 @@
         ]
     },
     {
-        "id": 100,
+        "id": 3,
         "type": "drag-drop",
         "question": {
             "desc_1": "You have a table named SalesFact in an enterprise data warehouse in Azure Synapse Analytics. SalesFact contains sales data from the past 36 months and has the following characteristics:",

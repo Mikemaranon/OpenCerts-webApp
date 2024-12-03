@@ -37,28 +37,39 @@ function recallQuestions() {
 }
 
 function applyFilter(data) {
+    const container = document.querySelector('.questions-container');
+    const index = document.querySelector('.topic-index');
     const taggedData = [];
     let contador = 0;
 
-    for(let i = 0; i < data.length; i++) { // leemos cada pregunta en data
-        for(let x = 0; x < data[i].tags.length; x++) { // leemos cada etiqueta en la pregunta
-            for(let y = 0; y < tag_list.length; y++) { // leemos cada elemento de la lista de etiquetas
-                if(data[i].tags[x] == tag_list[y]) { // comparamos cada etiqueta de la pregunta con cada elemento de la lista
-                    contador++;
-                    if(contador == tag_list.length) {
-                        taggedData.push(data[i]);
-                        contador = 0;
-                        // break;
+    if (tag_list.length == 0) {
+        container.innerHTML = '';
+        index.innerHTML = '<h2>Índice</h2><br>';
+        renderQuestions(data);
+    } else {
+        console.log("cantidad de etiquetas: ", tag_list.length);
+
+        for(let i = 0; i < data.length; i++) { // leemos cada pregunta en data
+            for(let x = 0; x < data[i].tags.length; x++) { // leemos cada etiqueta en la pregunta
+                for(let y = 0; y < tag_list.length; y++) { // leemos cada elemento de la lista de etiquetas
+                    if(data[i].tags[x] == tag_list[y]) { // comparamos cada etiqueta de la pregunta con cada elemento de la lista
+                        contador++;
+                        if(contador == tag_list.length) {
+                            taggedData.push(data[i]);
+                            contador = 0;
+                            break;
+                        }
                     }
                 }
             }
         }
+        container.innerHTML = '';
+        index.innerHTML = '<h2>Índice</h2><br>';
+        renderQuestions(taggedData);
     }
-    const container = document.querySelector('.questions-container');
-    const index = document.querySelector('.topic-index');
-    container.innerHTML = '';
-    index.innerHTML = '<h2>Índice</h2><br>';
-    renderQuestions(taggedData);
+    
+    taggedData.length = 0;
+    tag_list.length = 0;    
 }
 
 function renderQuestions(jsonList) {
