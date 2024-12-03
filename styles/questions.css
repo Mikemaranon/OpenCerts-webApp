@@ -7,14 +7,13 @@
 }
 
 .searchdiv {
-    background-color: #4f94cf; 
+    background-color: rgba(163, 193, 219, 0.8); 
     width: 100%;                         /* ocupa un 85% del ancho de la seccion central */
     color: white;
     padding: 20px;                      /* evitamos que los elementos se peguen */
     align-items: center;
     border-radius: 8px;   
     box-sizing: border-box;             /* Asegura que padding y border no alteren el ancho */ 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .searchdiv h2 {
@@ -42,8 +41,8 @@
 
 .search-container button {
     width: 20%;
-    height: 41px;
-    background-color: #85aedd;
+    height: 35px;
+    background-color: #51a5dd;
     border: none;
     color: white;
     border-radius: 10px;
@@ -57,12 +56,13 @@
 .tags-container {
     margin-bottom: -14px;
     background-color: #dbf9f9;
-    min-height: 40px;
+    min-height: 50px;
     border-radius: 8px;  
     padding: 5px;   
     display: flex; 
     justify-content: left;
     flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .dynamic-div {
@@ -86,7 +86,7 @@
     background-color: #e0f7fa; 
     padding: 20px;                      /* evitamos que los elementos se peguen */
     border-radius: 8px;                 /* esquina redondeada para el div */
-    height: 100%;
+    height: auto;
     width: 90%;                         /* ocupa un 85% del ancho de la seccion central */
     margin: 0 auto;                     /* Centrar horizontalmente */
     box-sizing: border-box;             /* Asegura que padding y border no alteren el ancho */

@@ -1,7 +1,10 @@
 // Espera a que el DOM esté completamente cargado
+
+jsonUrl = document.querySelector(".jsonDirectory").innerHTML;
+const JSON_LIST = fetch(jsonUrl);
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    jsonUrl = document.querySelector(".jsonDirectory").innerHTML;
     console.log(jsonUrl)
 
     fetch(jsonUrl) 
@@ -17,8 +20,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
+function recallQuestions() {
+    console.log(jsonUrl)
+
+    fetch(jsonUrl) 
+        .then(response => {
+            if (!response.ok) throw new Error('Error al cargar el JSON');
+            return response.json();
+        })
+        .then(data => {
+            applyFilter(data); // Llama a la función de renderizado
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function applyFilter(data) {
+    const taggedData = [];
+    let contador = 0;
+
+    for(let i = 0; i < data.length; i++) { // leemos cada pregunta en data
+        for(let x = 0; x < data[i].tags.length; x++) { // leemos cada etiqueta en la pregunta
+            for(let y = 0; y < tag_list.length; y++) { // leemos cada elemento de la lista de etiquetas
+                if(data[i].tags[x] == tag_list[y]) { // comparamos cada etiqueta de la pregunta con cada elemento de la lista
+                    contador++;
+                    if(contador == tag_list.length) {
+                        taggedData.push(data[i]);
+                        contador = 0;
+                        // break;
+                    }
+                }
+            }
+        }
+    }
+    const container = document.querySelector('.questions-container');
+    const index = document.querySelector('.topic-index');
+    container.innerHTML = '';
+    index.innerHTML = '<h2>Índice</h2><br>';
+    renderQuestions(taggedData);
+}
+
 function renderQuestions(jsonList) {
-    const container = document.querySelector('.center-section'); // Contenedor de las preguntas
+
+    const container = document.querySelector('.questions-container'); // Contenedor de las preguntas
     const index = document.querySelector('.topic-index'); // Contenedor del índice
     let questionHTML = '';
     let questionContent = '';
@@ -28,6 +73,7 @@ function renderQuestions(jsonList) {
     let currentTopic = 0;
             
     for (let i = 0; i < jsonList.length; i++) {
+
         const question = jsonList[i];
 
         // Condicional de crear tema nuevo solo si se aumenta de tema

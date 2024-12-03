@@ -19,7 +19,10 @@
             "[ManagerEmployeeKey] [int] NULL", 
             "[ManagerName] [varchar](200) NULL"
         ],
-        "topic": 1
+        "topic": 1,
+        "tags": [
+            "sql", "azure synapse analytics"
+        ]
     },
     {
         "id": 2,
@@ -38,10 +41,13 @@
             "an error", 
             "a null value"
         ],
-        "topic": 1
+        "topic": 1,
+        "tags": [
+            "sql", "azure synapse workspace"
+        ]
     },
     {
-        "id": 3,
+        "id": 100,
         "type": "drag-drop",
         "question": {
             "desc_1": "You have a table named SalesFact in an enterprise data warehouse in Azure Synapse Analytics. SalesFact contains sales data from the past 36 months and has the following characteristics:",
@@ -60,7 +66,10 @@
             "Execute a DELETE statemen where the value in the Date column is more than 36 months ago",
             "Copy the data to a new table by using CREATE TABLE AS SELECT(CTAS)"
         ],
-        "topic": 1
+        "topic": 1,
+        "tags": [
+            "sql", "azure synapse analytics", "data warehouse", "partition"
+        ]
     },
     {
         "id": 10,
@@ -80,7 +89,10 @@
             "cccccccccccccccccccccccc ccccccccccccccccccccc",
             "safdadsasdgadfgaAS)"
         ],
-        "topic": 1
+        "topic": 1,
+        "tags": [
+            "prueba"
+        ]
     },
     {
         "id": 20,
@@ -100,7 +112,10 @@
             "cccccccccccccccccccccccc ccccccccccccccccccccc",
             "safdadsasdgadfgaAS)"
         ],
-        "topic": 1
+        "topic": 1,
+        "tags": [
+            "prueba"
+        ]
     },
     {
         "id": 29,
@@ -119,7 +134,10 @@
             "an error", 
             "a null value"
         ],
-        "topic": 2
+        "topic": 2,
+        "tags": [
+            "prueba"
+        ]
     },
     {
         "id": 30,
@@ -138,7 +156,10 @@
             "an error", 
             "a null value"
         ],
-        "topic": 2
+        "topic": 2,
+        "tags": [
+            "prueba"
+        ]
     },
     {
         "id": 40,
@@ -157,7 +178,10 @@
             "an error", 
             "a null value"
         ],
-        "topic": 2
+        "topic": 2,
+        "tags": [
+            "prueba"
+        ]
     },
     {
         "id": 50,
@@ -176,7 +200,10 @@
             "an error", 
             "a null value"
         ],
-        "topic": 2
+        "topic": 2,
+        "tags": [
+            "prueba"
+        ]
     },
     {
         "id": 60,
@@ -188,6 +215,9 @@
             "ejemplo 1": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
             "ejemplo 2": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"]
         },
-        "topic": 2
+        "topic": 2,
+        "tags": [
+            "prueba"
+        ]
     }
 ]
