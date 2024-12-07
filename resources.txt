@@ -4,3 +4,5 @@ login background: https://www.google.com/url?sa=i&url=https%3A%2F%2Fmicrosoft.de
 
 groq
 node console: npm install --save groq-sdk
+
+pdf a txt: https://www.pdf2go.com/es/

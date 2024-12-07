@@ -118,6 +118,7 @@ function renderQuestions(jsonList) {
                 <li>    
                     <a href="#t${currentTopic}q1" id="t${currentTopic}">Tema ${currentTopic}</a>
                     <ul class="sublist">
+                        <li><a href="#t${question.topic}q${question.id}">Pregunta ${question.id}</a></li>
             `;
         } else {
             if (question.id % 10 === 0) {

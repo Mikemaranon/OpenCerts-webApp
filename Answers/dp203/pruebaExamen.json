@@ -1,0 +1,89 @@
+[
+    {
+        "id": 1,
+        "type": "single-select",
+        "question": {
+            "desc_1": "You have a table in an Azure Synapse Analytics dedicated SQL pool. The table was created by using the following Transact-SQL statement.",
+            "img_1": "../../Answers/dp203/images/T1P1.png",
+            "desc_2": "You need to alter the table to meet the following requirements:",
+            "u_list": [
+                "Ensure that users can identify the current manager of employees.",
+                "Support creating an employee reporting hierarchy for your entire company.",
+                "Provide fast lookup of the managers' attributes such as name and job title."
+            ],
+            "desc_3": "Which column should you add to the table?"
+        },
+        "options": [
+            "[ManagerEmployeeID] [smallint] NULL", 
+            "[ManagerEmployeeKey] [smallint] NULL", 
+            "[ManagerEmployeeKey] [int] NULL", 
+            "[ManagerName] [varchar](200) NULL"
+        ],
+        "topic": 1,
+        "tags": [
+            "sql", "azure-synapse-analytics", "topic-1"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "single-select",
+        "question": {
+            "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
+            "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
+            "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
+            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
+            "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
+            "desc_4": "What will be returned by the query?"
+        },
+        "options": [
+            "24", 
+            "an error", 
+            "a null value"
+        ],
+        "topic": 1,
+        "tags": [
+            "sql", "azure-synapse-workspace", "topic-1"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "drag-drop",
+        "question": {
+            "desc_1": "You have a table named SalesFact in an enterprise data warehouse in Azure Synapse Analytics. SalesFact contains sales data from the past 36 months and has the following characteristics:",
+            "u_list": [
+                "Is partitioned by month",
+                "Contains one billion rows",
+                "Contains one billion rows"
+            ],
+            "desc_2": "At the beginning of each month, you need to remove data from SalesFact that is older than 36 months as quickly as possible. Which three actions should you perform in sequence in a stored procedure? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br>Select and Place:"
+        },
+        "options": [
+            "Switch the partition containing the stale data from SalesFact to SalesFact_Work", 
+            "Truncate the partition containing the stale data", 
+            "Drop the SalesFact_Work table", 
+            "Create an empty table named SalesFact_Work that has the same schema as SalesFact",
+            "Execute a DELETE statemen where the value in the Date column is more than 36 months ago",
+            "Copy the data to a new table by using CREATE TABLE AS SELECT(CTAS)"
+        ],
+        "topic": 1,
+        "tags": [
+            "sql", "azure-synapse-analytics", "data-warehouse", "partition", "topic-1"
+        ]
+    },
+    {
+        "id": 60,
+        "type": "hot-spot",
+        "question": {
+            "desc_1": "¿Cuáles son las opciones correctas?"
+        },
+        "options": {
+            "ejemplo 1": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+            "ejemplo 2": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"]
+        },
+        "topic": 2,
+        "tags": [
+            "prueba"
+        ]
+    }
+]
