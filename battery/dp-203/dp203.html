@@ -43,9 +43,14 @@
             <div class="title">
                 <h1>Certification Exam: DP-203</h1>
             </div>
-            <div>
-                <div class="button2">
-                    <button onclick="window.location.href='../exam.html'">Realizar examen</button>
+            <div class="button-container">
+                <div class="dropdown">
+                    <button class="main-button" id="toggleDropdown">...</button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <button onclick="window.location.href='../exam-form.html'">Realizar examen</button>
+                        <button onclick="window.location.href='../add-new-question.html'">Añadir pregunta</button>
+                        <button onclick="window.location.href='../error.html'">Reportar error</button>
+                    </div>
                 </div>
             </div> 
         </header>
@@ -98,6 +103,7 @@
         <p class="jsonDirectory">../../Answers/dp203/dp-203.json</p>
         <p class="jsonDirectoryTags">../../Answers/dp203/tags.json</p>
     </body>
+    <script src="../../js-codes/header.js"></script>
     <script src="../../js-codes/multiple-choice.js"></script>
     <script src="../../js-codes/single-select.js"></script>
     <script src="../../js-codes/chat.js"></script>

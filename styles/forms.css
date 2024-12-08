@@ -111,3 +111,14 @@ footer {
     padding: 10px;
     font-size: 1rem;
 }
+
+.question-type {
+    color: rgb(97, 97, 97);
+    margin-top: 5px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 40px;
+    max-width: 400px;
+    border-color: rgb(216, 216, 216);
+}
