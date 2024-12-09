@@ -1,5 +1,28 @@
 let tag_list = [];
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    tags = document.querySelector(".jsonDirectoryTags").innerHTML;
+
+    // Cargar el JSON y procesarlo
+    fetch(tags)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error al cargar el JSON: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            setTagSelector(data);
+        })
+        .catch(error => {
+            console.error('Error al procesar el JSON:', error);
+        });
+
+    ini_searchTag()
+
+});
+
 function ini_searchTag() {
     const input = document.getElementById('searchable-select');
     const button = document.getElementById('addButton');
@@ -53,11 +76,7 @@ $(document).ready(function() {
 });
 
 const selectElement = document.getElementById('searchable-select');
-let data = null;
-
-function addExamTags() {
-    data = document.querySelector('.jsonDirectoryTags')
-}
+const dataString = document.querySelector('.jsonDirectoryTags')
 
 function setTagSelector(data) {
     // Iterar sobre el JSON y agregar opciones al <select>
