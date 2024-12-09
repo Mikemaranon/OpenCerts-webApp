@@ -5,6 +5,12 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
+textarea {
+    height: 10px;
+    resize: vertical; /* Permite cambiar la altura si se desea */
+    line-height: 1.2;
+}
+
 /* Contenedor principal de la página */
 .page-container {
     display: flex;
@@ -87,8 +93,9 @@ main {
 }
 
 
+
 /* Estilo para el botón de envío */
-button[type="submit"] {
+button {
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
@@ -99,7 +106,7 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+button:hover {
     background-color: #0056b3;
 }
 
@@ -121,4 +128,67 @@ footer {
     height: 40px;
     max-width: 400px;
     border-color: rgb(216, 216, 216);
+}
+
+/* Estilo para el contenedor de la imagen */
+.image-container {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilo para el input de imagen */
+.image-input {
+    margin-bottom: 10px;
+}
+
+/* Estilo para la previsualización de la imagen */
+.image-preview {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo para el título de la imagen */
+.image-title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Estilo para el botón X */
+.delete-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Mostrar la X al pasar el ratón */
+.image-container:hover .delete-button {
+    opacity: 1;
+}
+
+/* Estilo para los textareas añadidos */
+.custom-textarea {
+    width: 80%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
 }

@@ -51,6 +51,17 @@
                         </div>
 
                         <div class="form-group">
+                            <button type="button" onclick="addImageInput()">Añadir Imagen</button>
+                            <button type="button" onclick="addTextarea('list')">Añadir Lista</button>
+                            <button type="button" onclick="addTextarea('code')">Añadir Código</button>
+                        </div>
+
+                        <!-- Contenedor de campos adicionales -->
+                        <div class="form-group">
+                            <div id="additional-fields"></div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="solucion">Opciones</label>
                             <textarea id="solucion" name="solucion" placeholder="Contenido de la opción " required></textarea>
                         </div>
@@ -70,4 +81,5 @@
         </footer>
     </div>
 </body>
+<script src="../js-codes/new-question-form.js"></script>
 </html>
