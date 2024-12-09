@@ -1,0 +1,98 @@
+
+header {
+    background-color: rgba(0, 195, 255, 0.4);     /* azul con opacidad del 40% */
+    padding: 20px;                                  /* ajusta el padding según sea necesario */
+    position: fixed;                                /* para que se quede fijo en la parte superior al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;                                    /* asegura que el header quede por encima de otros elementos */
+}
+
+body::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);        /* capa blanca semitransparente */
+    backdrop-filter: blur(10px);                   /* efecto de desenfoque */
+    z-index: -1;                                   /* colocar detrás del contenido */
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;                                  /* ocupa toda la pantalla */
+}
+
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 500px;                                   /* ancho fijo del contenedor */
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;                                      /* espaciado entre los elementos */
+}
+
+.login-container label {
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-container input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.login-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#main-title {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#main-title:hover {
+    color: rgb(65, 90, 150);                      
+}
+
+header:hover {
+    background-color: rgba(159, 227, 248, 0.4);
+}
+
+footer {
+    padding: 10px;
+    color: grey;
+    text-align: center;
+}

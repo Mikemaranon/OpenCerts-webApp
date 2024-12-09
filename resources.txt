@@ -6,3 +6,5 @@ groq
 node console: npm install --save groq-sdk
 
 pdf a txt: https://www.pdf2go.com/es/
+
+OCR

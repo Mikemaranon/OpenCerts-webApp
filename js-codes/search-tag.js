@@ -46,13 +46,18 @@ $(document).ready(function() {
     $('#searchable-select').select2({
         placeholder: "Select an option",
         width: "150px",
-        height: "80px",
+        height: "100px !important",
         allowClear: true,
         borderRadius: "10px",  
     });
 });
 
 const selectElement = document.getElementById('searchable-select');
+let data = null;
+
+function addExamTags() {
+    data = document.querySelector('.jsonDirectoryTags')
+}
 
 function setTagSelector(data) {
     // Iterar sobre el JSON y agregar opciones al <select>

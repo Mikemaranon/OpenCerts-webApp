@@ -1,0 +1,74 @@
+
+.searchdiv {
+    background-color: rgba(163, 193, 219, 0.8); 
+    width: 100%;                         
+    color: white;
+    padding: 20px;                      /* evitamos que los elementos se peguen */
+    align-items: center;
+    border-radius: 8px;   
+    box-sizing: border-box;             /* Asegura que padding y border no alteren el ancho */ 
+}
+
+.searchdiv h2 {
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 29px;
+    margin-left: -3%;
+    font-size: 200%;
+    text-align: right;
+    padding-top: 5px;
+}   
+
+.searchable-select option {
+    margin:0px;
+}
+
+.search-container {
+    background-color: none;
+    float: right;
+    margin-top: -60px;
+    width: 50%;
+}
+
+.search-container button {
+    width: 20%;
+    height: 28px;
+    background-color: #51a5dd;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #1C5B90;
+}
+
+.tags-container {
+    margin-bottom: -14px;
+    background-color: #dbf9f9;
+    min-height: 50px;
+    border-radius: 8px;  
+    padding: 5px;   
+    display: flex; 
+    justify-content: left;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.dynamic-div {
+    padding: 10px;
+    background-color:#007BFF;  
+    border-radius: 5px;  
+    width: auto;
+    margin: 5px;
+}
+
+.dynamic-div:hover {
+    background-color:#1C5B90;  
+    cursor: pointer;
+}
+
+.from-to {
+    width: 35%;
+}
