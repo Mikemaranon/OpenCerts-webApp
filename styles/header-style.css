@@ -51,6 +51,7 @@ header h1 {
         cursor: pointer;
         width: 100%;                    /* hace que el botón ocupe todo el ancho de su div */
         font-size: 24px;
+        transition: all 0.3s ease; /* Transición suave para los cambios */
     }
 
     .button1 button:hover, 
@@ -58,6 +59,8 @@ header h1 {
     .button3 button:hover {
         background-color: rgb(65, 90, 150);    /* color al pasar el mouse */
         color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+        transform: scale(1.05);               /* Aumenta el tamaño del botón ligeramente */
     }
 
     .login-container {
