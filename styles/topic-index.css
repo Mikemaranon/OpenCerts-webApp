@@ -1,4 +1,4 @@
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
     .left-section {
         position: fixed;
         top: 60px;
@@ -103,7 +103,7 @@ ul li a:hover {
     color: #1C5B90; /* Color al pasar el mouse */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .left-section, .back-section-left {
         display: none;
     }   

@@ -1,5 +1,5 @@
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
     .right-section {    
         position: fixed;
         top: 90px;
@@ -88,7 +88,7 @@
     align-self: flex-start; /* Alinea los mensajes de la IA a la izquierda */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .right-section,
     .back-section-right {
         display: none;
