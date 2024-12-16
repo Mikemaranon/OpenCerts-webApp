@@ -261,7 +261,7 @@ function renderQuestions(jsonList) {
                                 ${question.options
                                     .map(
                                         (option, index) => `
-                                    <div class="draggable ${index + 1}" draggable="true" id="block${question.id}-${index + 1}">
+                                    <div class="draggable ${index + 1}" draggable="true" id="${index + 1}">
                                         ${option}
                                     </div> 
                                 `

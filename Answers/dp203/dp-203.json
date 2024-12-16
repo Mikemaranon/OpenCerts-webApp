@@ -22,7 +22,8 @@
         "topic": 1,
         "tags": [
             "sql", "azure-synapse-analytics", "topic-1"
-        ]
+        ],
+        "answer": 2
     },
     {
         "id": 2,

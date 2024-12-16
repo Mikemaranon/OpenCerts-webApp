@@ -1,0 +1,64 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5e6;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7931e;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.photo {
+    background-color: #ffcc33;
+    color: #000;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Panel de rendimiento */
+.performance .summary button {
+    background-color: #f7931e;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.performance .summary button:hover {
+    background-color: #ffaf50;
+}
+
+/* Sección de últimos exámenes */
+.last-exams {
+    background-color: #ffcc33
+}
