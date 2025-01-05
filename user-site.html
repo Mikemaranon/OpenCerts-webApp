@@ -5,42 +5,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard de Usuario</title>
         <link rel="stylesheet" href="styles/user-site.css">
+        
+        <link rel="stylesheet" href="styles/user-site.css">
+        <link rel="stylesheet" href="../styles/body-style.css">
+        <link rel="stylesheet" href="../styles/chat-style.css">
+        <link rel="stylesheet" href="../styles/generalStyle.css">
+        <link rel="stylesheet" href="../styles/header-style.css">
+        <link rel="stylesheet" href="../styles/topic-index.css">
+        <link rel="stylesheet" href="../styles/questions.css"> 
+        <link rel="stylesheet" href="../styles/background.css">
+        
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Librería para gráficos -->
     </head>
     <body>
         <!-- Contenedor principal -->
         <div class="container">
             <!-- Encabezado -->
-            <header>
-                <h2>Bienvenido <span id="username">@user</span></h2>
-                <div class="photo" id="user-photo">foto</div>
-            </header>
+            <div class="subcont">    
+                <section class="name">
+                    <h2>Bienvenido <span id="username">@user</span></h2>
+                    <div class="photo" id="user-photo">foto</div>
+                </section>
 
-            <!-- Panel de rendimiento -->
-            <section class="performance">
-                <div class="summary">
-                    <button onclick="updateChart('exams')">Exámenes realizados</button>
-                    <button onclick="updateChart('hours')">Horas invertidas</button>
-                    <button onclick="updateChart('types')">Rendimiento por tipo de pregunta</button>
-                    <button onclick="updateChart('average')">Media de rendimiento</button>
-                </div>
-            </section>
+                <section class="last-exams">
+                    <h3>Últimos 3 exámenes</h3>
+                    <ul id="exam-list"></ul>
+                </section>
+            </div>
+            <div class="subcont">    
+                <!-- Panel de rendimiento -->
+                <section class="performance">
+                    <div class="summary">
+                        <button onclick="updateChart('exams')">Exámenes realizados</button>
+                        <button onclick="updateChart('hours')">Horas invertidas</button>
+                        <button onclick="updateChart('types')">Rendimiento por tipo de pregunta</button>
+                        <button onclick="updateChart('average')">Media de rendimiento</button>
+                    </div>
+                </section>
 
-            <!-- Sección de últimos exámenes -->
-            <section class="last-exams">
-                <h3>Últimos 3 exámenes</h3>
-                <ul id="exam-list"></ul>
-            </section>
+                <!-- Gráfica y leyenda -->
+                <section class="graphics">
+                    <div class="chart">
+                        <canvas id="chart"></canvas> <!-- Gráfico circular -->
+                    </div>
+                </section>
 
-            <!-- Gráfica y leyenda -->
-            <section class="graphics">
-                <div class="chart">
-                    <canvas id="chart"></canvas> <!-- Gráfico circular -->
-                </div>
+                
                 <div class="legend" id="legend">
                     <!-- Leyenda dinámica -->
                 </div>
-            </section>
+            </div>
         </div>
 
         <script src="js-codes/user-site.js"></script>

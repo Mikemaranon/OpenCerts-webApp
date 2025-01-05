@@ -68,7 +68,7 @@ function updateChart(type) {
         options: {
             responsive: true,
             plugins: {
-                legend: { display: false }, // Ocultar leyenda por defecto
+                legend: { display: true }, // Ocultar leyenda por defecto
                 tooltip: { enabled: true }  // Mostrar tooltip
             }
         }
