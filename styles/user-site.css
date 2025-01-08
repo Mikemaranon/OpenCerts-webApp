@@ -105,7 +105,6 @@ body {
 .photo {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .photo img {
@@ -140,10 +139,6 @@ body {
 @media (max-width: 600px) {
     .welcome {
         font-size: 1.5em;
-    }
-
-    .photo {
-        margin-bottom: 10px;
     }
 
     .new-section {
@@ -157,11 +152,11 @@ body {
     }
 }
 
-
 .photo {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
 }
 
 .photo img {
@@ -196,10 +191,6 @@ body {
 @media (max-width: 600px) {
     .welcome {
         font-size: 1.5em;
-    }
-
-    .photo {
-        margin-bottom: 10px;
     }
 
     .new-section {
