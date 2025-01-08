@@ -5,34 +5,76 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard de Usuario</title>
         <link rel="stylesheet" href="styles/user-site.css">
+        <link rel="stylesheet" href="styles/body-style.css">
+        <link rel="stylesheet" href="styles/chat-style.css">
+        <link rel="stylesheet" href="styles/generalStyle.css">
+        <link rel="stylesheet" href="styles/topic-index.css">
+        <link rel="stylesheet" href="styles/questions.css"> 
+        <link rel="stylesheet" href="styles/background.css">
         
-        <link rel="stylesheet" href="styles/user-site.css">
-        <link rel="stylesheet" href="../styles/body-style.css">
-        <link rel="stylesheet" href="../styles/chat-style.css">
-        <link rel="stylesheet" href="../styles/generalStyle.css">
-        <link rel="stylesheet" href="../styles/header-style.css">
-        <link rel="stylesheet" href="../styles/topic-index.css">
-        <link rel="stylesheet" href="../styles/questions.css"> 
-        <link rel="stylesheet" href="../styles/background.css">
-        
+        <style>
+            .right-section {
+                top: 15px;
+                height: calc(100% - 50px);
+            }
+            .back-section-right {
+                width: 100%;
+                position: relative;
+                margin-right: 15px;
+                max-width: 19%;
+            }
+            .center-section {
+                width: 50%;
+                top: -64px;
+            }
+            .center-section h1 {
+                color: white;
+                margin-left: 30px;
+            }
+        </style>
+
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Librería para gráficos -->
     </head>
     <body>
-        <!-- Contenedor principal -->
-        <div class="container">
-            <!-- Encabezado -->
-            <div class="subcont">    
-                <section class="name">
-                    <h2>Bienvenido <span id="username">@user</span></h2>
-                    <div class="photo" id="user-photo">foto</div>
-                </section>
-
-                <section class="last-exams">
-                    <h3>Últimos 3 exámenes</h3>
-                    <ul id="exam-list"></ul>
-                </section>
-            </div>
-            <div class="subcont">    
+        <main>
+            <section class="center-section" id="main-content">
+                <div class="container">
+                    <!-- Encabezado -->
+                        <section class="name">
+                            <div style="padding: 20px;">
+                                <h1>Bienvenido <br><br><span id="username">@user</span></h1>
+                            </div>
+                            <div style="padding: 20px;">
+                                <div class="photo" id="user-photo">foto</div>
+                            </div>
+                        </section>
+        
+                        <section class="last-exams">
+                            <div style="padding: 20px;">
+                                <table class="exams-table" id="exam-list">
+                                    <caption>Últimos 3 exámenes</caption>
+                                    <thead>
+                                        <tr height="30">
+                                            <th id="left">Examen</th>
+                                            <th>Resultado (%)</th>
+                                            <th id="right">Tiempo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody >
+                                        <!-- Table rows will go here -->
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="empty-row">
+                                            <td colspan="4"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </section>
+                </div>
+            </section>
+            <section class="back-section-right"></section>
+            <section class="right-section">
                 <!-- Panel de rendimiento -->
                 <section class="performance">
                     <div class="summary">
@@ -42,20 +84,21 @@
                         <button onclick="updateChart('average')">Media de rendimiento</button>
                     </div>
                 </section>
-
                 <!-- Gráfica y leyenda -->
                 <section class="graphics">
                     <div class="chart">
                         <canvas id="chart"></canvas> <!-- Gráfico circular -->
                     </div>
                 </section>
-
                 
                 <div class="legend" id="legend">
                     <!-- Leyenda dinámica -->
                 </div>
-            </div>
-        </div>
+            </section>
+            <!-- Contenedor principal -->
+        </main>
+        
+        
 
         <script src="js-codes/user-site.js"></script>
     </body>

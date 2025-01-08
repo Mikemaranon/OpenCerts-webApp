@@ -22,12 +22,24 @@ function loadUserData() {
     document.getElementById("user-photo").textContent = userData.photo;
 
     // Mostrar últimos exámenes
-    const examList = document.getElementById("exam-list");
+    const examList = document.getElementById("exam-list").getElementsByTagName('tbody')[0];
     examList.innerHTML = ""; // Limpiar lista
     userData.exams.forEach(exam => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${exam.name} - ${exam.result} - ${exam.time}`;
-        examList.appendChild(listItem);
+        const row = document.createElement("tr");
+
+        const examName = document.createElement("td");
+        examName.textContent = exam.name;
+        row.appendChild(examName);
+
+        const examResult = document.createElement("td");
+        examResult.textContent = exam.result;
+        row.appendChild(examResult);
+
+        const examTime = document.createElement("td");
+        examTime.textContent = exam.time;
+        row.appendChild(examTime);
+
+        examList.appendChild(row);
     });
 }
 

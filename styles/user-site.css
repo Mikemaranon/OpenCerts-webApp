@@ -203,3 +203,51 @@ body {
         width: 80%;
     }
 }
+
+table {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 1rem;
+    width: 90%;
+    border-collapse: collapse; /* Add this */
+    border-spacing: 0; /* Add this */
+}
+
+caption {
+    text-align: center; /* Center align the caption */
+    font-size: 1.5rem; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 30px; /* Add some space below the caption */
+}
+
+thead tr {
+    background-color: #7297c0;
+}
+
+tbody tr {
+    height: 30px;
+}
+
+#left {
+    border-top-left-radius: 15px;
+}
+
+#right {
+    border-top-right-radius: 15px;
+}
+
+tr:hover {
+    background-color: rgb(121, 161, 184);
+    color: black;
+}
+
+tfoot .empty-row {
+    background-color: #7297c0;
+    height: 30px;
+}
+
+tfoot .empty-row td {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
