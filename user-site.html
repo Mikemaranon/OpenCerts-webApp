@@ -39,38 +39,37 @@
         <main>
             <section class="center-section" id="main-content">
                 <div class="container">
-                    <!-- Encabezado -->
-                        <section class="name">
-                            <div style="padding: 20px;">
-                                <h1>Bienvenido <br><br><span id="username">@user</span></h1>
-                            </div>
-                            <div style="padding: 20px;">
-                                <div class="photo" id="user-photo">foto</div>
-                            </div>
-                        </section>
+                    <section class="name">
+                        <div style="padding: 20px;">
+                            <h1>Bienvenido <br><br><span id="username">@user</span></h1>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="photo" id="user-photo">foto</div>
+                        </div>
+                    </section>
         
-                        <section class="last-exams">
-                            <div style="padding: 20px;">
-                                <table class="exams-table" id="exam-list">
-                                    <caption>Últimos 3 exámenes</caption>
-                                    <thead>
-                                        <tr height="30">
-                                            <th id="left">Examen</th>
-                                            <th>Resultado (%)</th>
-                                            <th id="right">Tiempo</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody >
-                                        <!-- Table rows will go here -->
-                                    </tbody>
-                                    <tfoot>
-                                        <tr class="empty-row">
-                                            <td colspan="4"></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </section>
+                    <section class="last-exams">
+                        <div style="padding: 20px;">
+                            <table class="exams-table" id="exam-list">
+                                <caption>Últimos 3 exámenes</caption>
+                                <thead>
+                                    <tr height="30">
+                                        <th id="left">Examen</th>
+                                        <th>Resultado (%)</th>
+                                        <th id="right">Tiempo</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    <!-- Table rows will go here -->
+                                </tbody>
+                                <tfoot>
+                                    <tr class="empty-row">
+                                        <td colspan="4"></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </section>
                 </div>
             </section>
             <section class="back-section-right"></section>
@@ -78,16 +77,16 @@
                 <!-- Panel de rendimiento -->
                 <section class="performance">
                     <div class="summary">
-                        <button onclick="updateChart('exams')">Exámenes realizados</button>
-                        <button onclick="updateChart('hours')">Horas invertidas</button>
-                        <button onclick="updateChart('types')">Rendimiento por tipo de pregunta</button>
-                        <button onclick="updateChart('average')">Media de rendimiento</button>
+                        <button onclick="setChartTypeToPie(); updateChart('exams')">Exámenes realizados</button>
+                        <button onclick="setChartTypeToPie(); updateChart('hours')">Horas invertidas</button>
+                        <button onclick="setChartTypeToBar(); updateChart('types')">Rendimiento por tipo de pregunta</button>
+                        <button onclick="setChartTypeToBar(); updateChart('average')">Media de rendimiento</button>
                     </div>
                 </section>
                 <!-- Gráfica y leyenda -->
                 <section class="graphics">
                     <div class="chart">
-                        <canvas id="chart"></canvas> <!-- Gráfico circular -->
+                        <canvas id="chart" height="400"></canvas> <!-- Gráfico circular -->
                     </div>
                 </section>
                 

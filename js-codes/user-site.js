@@ -1,17 +1,34 @@
 // Simulación de datos recibidos del servidor
 const userData = {
     username: "Juan123",
-    photo: "foto",
+    photo: "styles/user-photo.jpg",
     exams: [
-        { name: "Examen 1", result: "85%", time: "60 minutos" },
-        { name: "Examen 2", result: "90%", time: "45 minutos" },
-        { name: "Examen 3", result: "78%", time: "70 minutos" }
+        { name: "dp-203", result: "85%", time: "60 minutos" },
+        { name: "az-900", result: "90%", time: "45 minutos" },
+        { name: "az-104", result: "78%", time: "70 minutos" }
     ],
     stats: {
-        exams: [30, 45, 25], // Porcentaje de actividad por examen
-        hours: [5, 7, 3],    // Horas invertidas en cada examen
-        types: [40, 35, 25], // Rendimiento por tipo de pregunta
-        average: [80, 85, 90] // Media de rendimiento
+        exams: {
+            dp203: 30,
+            az900: 45,
+            az104: 25
+        }, // pruebas realizadas de cada examen
+        hours: {
+            dp203: 13,
+            az900: 40,
+            az104: 5
+        }, // Horas invertidas en cada examen
+        types: {
+            single_select: 98,
+            multiple_choice: 79,
+            drag_n_drop: 45,
+            hot_spot: 87,
+        }, // Rendimiento por tipo de pregunta
+        average: {
+            dp203: 50,
+            az900: 70,
+            az104: 25
+        }, // Media de rendimiento
     }
 };
 
@@ -19,7 +36,7 @@ const userData = {
 function loadUserData() {
     // Cargar nombre y foto del usuario
     document.getElementById("username").textContent = userData.username;
-    document.getElementById("user-photo").textContent = userData.photo;
+    document.getElementById("user-photo").src = userData.photo;
 
     // Mostrar últimos exámenes
     const examList = document.getElementById("exam-list").getElementsByTagName('tbody')[0];
@@ -47,29 +64,18 @@ function loadUserData() {
 let chart; // Variable global para almacenar la gráfica actual
 
 function updateChart(type) {
-    const labels = userData.exams.map(exam => exam.name);
-    const data = userData.stats[type];
-    const colors = ["#f7931e", "#ffcc33", "#ff8b42"]; // Colores para la gráfica
+    const labels = Object.keys(userData.stats[type]);
+    const data = Object.values(userData.stats[type]);
+    const colors = ["#f7931e", "#ffcc33", "#ff8b42", "#4caf50", "#2196f3", "#9c27b0", "#e91e63", "#00bcd4"]; // Colores para la gráfica
 
-    // Actualizar la leyenda
-    const legendContainer = document.getElementById("legend");
-    legendContainer.innerHTML = ""; // Limpiar leyenda anterior
-    labels.forEach((label, index) => {
-        const legendItem = document.createElement("div");
-        legendItem.innerHTML = `
-            <span style="background-color: ${colors[index]}; width: 20px; height: 20px; display: inline-block;"></span>
-            ${label}: ${data[index]}%
-        `;
-        legendContainer.appendChild(legendItem);
-    });
+    if (chart) {
+        chart.destroy(); // Destruir la gráfica anterior si existe
+    }
 
-    // Destruir la gráfica anterior si existe
-    if (chart) chart.destroy();
-
-    // Crear un nuevo gráfico circular con Chart.js
     const ctx = document.getElementById("chart").getContext("2d");
+
     chart = new Chart(ctx, {
-        type: "pie",
+        type: chartType, // Usar la variable chartType
         data: {
             labels: labels,
             datasets: [{
@@ -80,15 +86,29 @@ function updateChart(type) {
         options: {
             responsive: true,
             plugins: {
-                legend: { display: true }, // Ocultar leyenda por defecto
+                legend: { display: chartType !== "bar" }, // Mostrar leyenda solo si no es "bar"
                 tooltip: { enabled: true }  // Mostrar tooltip
-            }
+            },
+            scales: chartType === "bar" ? { // Add scales option for bar chart
+                y: {
+                    beginAtZero: true
+                }
+            } : {}
         }
     });
 }
 
+function setChartTypeToPie() {
+    chartType = "pie";
+}
+
+function setChartTypeToBar() {
+    chartType = "bar";
+}
+
+
 // Inicializar la página al cargar
 window.onload = () => {
     loadUserData();
-    updateChart("exams"); // Mostrar el gráfico inicial
+    updateChart("exams"); // Mostrar el gráfico inicial con el tipo "exams"
 };
