@@ -1,4 +1,4 @@
-# DP-203
+# OpenCerts
 
 Este proyecto consiste en una página web donde poder publicar todo el contenido de la documentación relativa al DP-203, con el objetivo de poder escalarla al resto de exámenes.  
 En este repositorio aparecerán los ficheros del lado del cliente (HTML, CSS, JS) pero no del servidor.  
