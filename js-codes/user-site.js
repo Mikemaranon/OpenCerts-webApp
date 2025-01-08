@@ -110,5 +110,6 @@ function setChartTypeToBar() {
 // Inicializar la página al cargar
 window.onload = () => {
     loadUserData();
+    setChartTypeToPie(); // Establecer el tipo de gráfico inicial a "pie"
     updateChart("exams"); // Mostrar el gráfico inicial con el tipo "exams"
 };
