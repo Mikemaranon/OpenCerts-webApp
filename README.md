@@ -1,5 +1,7 @@
 # OpenCerts
 
+IMPORTANTE: para usar muchas funciones de la web es necesario simular un servidor dado que por motivos de seguridad el navegador no permite el acceso a ciertos archivos con rutas locales. para eso recomiendo usar la extensión live server de visual studio code: https://github.com/ritwickdey/vscode-live-server-plus-plus
+
 Este proyecto consiste en una página web donde poder publicar todo el contenido de la documentación relativa al DP-203, con el objetivo de poder escalarla al resto de exámenes.  
 En este repositorio aparecerán los ficheros del lado del cliente (HTML, CSS, JS) pero no del servidor.  
 
