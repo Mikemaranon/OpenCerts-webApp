@@ -65,6 +65,9 @@ function handleImageUpload(event, imageDiv, imageInput) {
 function addTextarea(type) {
     const container = document.getElementById("additional-fields");
 
+    const textareaDiv = document.createElement("div");
+    textareaDiv.classList.add("textarea-container");
+
     const textarea = document.createElement("textarea");
     textarea.classList.add("custom-textarea");
 
@@ -76,6 +79,14 @@ function addTextarea(type) {
         textarea.placeholder = "Introduce código en SQL u otro lenguaje";
     }
 
-    container.appendChild(textarea);
-    container.appendChild(document.createElement("br"));
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "x";
+    deleteButton.classList.add("delete-button");
+    deleteButton.onclick = () => {
+        container.removeChild(textareaDiv);
+    };
+
+    textareaDiv.appendChild(textarea);
+    textareaDiv.appendChild(deleteButton);
+    container.appendChild(textareaDiv);
 }
