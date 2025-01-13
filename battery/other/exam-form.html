@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="../styles/create-exam.css">
-    <link rel="stylesheet" href="../styles/generalStyle.css">
-    <link rel="stylesheet" href="../styles/background.css">
-    <link rel="stylesheet" href="../styles/tags.css">
+    <link rel="stylesheet" href="../../styles/create-exam.css">
+    <link rel="stylesheet" href="../../styles/generalStyle.css">
+    <link rel="stylesheet" href="../../styles/background.css">
+    <link rel="stylesheet" href="../../styles/tags.css">
 
     <!-- select2: libreria para poder buscar en un select -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
@@ -34,13 +34,8 @@
 
 </head>
 <body>
-    <button class="genericButton" onclick="goBack()">Regresar</button>
+    <button class="genericButton" onclick="window.history.back()">Regresar</button>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
     <div class="login-section">
         <div class="login-container">
             <h1>Exam <u>K</u>reator</h1>
@@ -72,7 +67,7 @@
             </form>
         </div>
     </div>
-    <p class="jsonDirectoryTags">../Answers/dp203/tags.json</p>
+    <p class="jsonDirectoryTags">../../Answers/dp203/tags.json</p>
 </body>
 <script src="../js-codes/search-tag.js"></script>
 </html>

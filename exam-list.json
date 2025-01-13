@@ -1,0 +1,14 @@
+[
+    {
+        "name": "DP-203",
+        "desc": "El examen DP-203 valida tus conocimientos sobre ingeniería de datos en la nube utilizando Azure.",
+        "ref": "https://learn.microsoft.com/es-es/credentials/certifications/azure-data-engineer/?practice-assessment-type=certification",
+        "exam": "battery/dp-203/dp203.html"
+    },
+    {
+        "name": "AZ-900",
+        "desc": "El examen AZ-900 está diseñado para quienes desean adquirir conocimientos fundamentales sobre Azure.",
+        "ref": "https://learn.microsoft.com/es-es/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification",
+        "exam": "battery/az-900/az900.html"
+    }
+]
