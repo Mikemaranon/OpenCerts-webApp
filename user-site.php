@@ -89,6 +89,11 @@
                         <button onclick="setChartTypeToBar(); updateChart('average')">Media de rendimiento</button>
                     </div>
                 </section>
+                <?php
+                    if (isset($_SESSION['user_logged_in']) && $_SESSION['role'] === 'admin') {
+                        echo '<button onclick="window.location.href=\'errors-list.html\'">Ir a Inicio</button>';
+                    }
+                ?>
                 <!-- Gráfica y leyenda -->
                 <section class="graphics">
                     <div class="chart">
