@@ -15,11 +15,27 @@ function addImageInput() {
         handleImageUpload(event, imageDiv, imageInput);
     };
 
-    // Añadir input al contenedor
+    // Crear el botón de eliminar
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "x";
+    deleteButton.classList.add("delete-button");
+    deleteButton.disabled = false; // Disable the button initially
+
+    deleteButton.onclick = () => {
+        imageDiv.remove();
+        imageInput.value = ""; // Clear the input value
+        deleteButton.disabled = true; // Disable the button again
+        // Re-add the delete button to the imageDiv
+        imageDiv.appendChild(deleteButton);
+    };
+
+    // Añadir input y botón al contenedor
+    imageDiv.appendChild(deleteButton);
     imageDiv.appendChild(imageInput);
     container.appendChild(imageDiv);
     container.appendChild(document.createElement("br"));
 }
+
 
 function handleImageUpload(event, imageDiv, imageInput) {
     const file = event.target.files[0];
@@ -52,6 +68,18 @@ function handleImageUpload(event, imageDiv, imageInput) {
             imageDiv.appendChild(imageInput); // Volver a añadir el botón de cargar imagen
             imageInput.value = ""; // Resetear el input
             imageInput.style.display = "block"; // Mostrar el input nuevamente
+            // Re-enable and re-add the original delete button
+            const originalDeleteButton = document.createElement("button");
+            originalDeleteButton.textContent = "x";
+            originalDeleteButton.classList.add("delete-button");
+            originalDeleteButton.disabled = false;
+            originalDeleteButton.onclick = () => {
+                imageDiv.remove();
+                imageInput.value = ""; // Clear the input value
+                originalDeleteButton.disabled = true; // Disable the button again
+                imageDiv.appendChild(originalDeleteButton);
+            };
+            imageDiv.appendChild(originalDeleteButton);
         };
 
         // Añadir elementos al contenedor
@@ -61,12 +89,22 @@ function handleImageUpload(event, imageDiv, imageInput) {
     }
 }
 
+// Add event listener to the image input
+//document.getElementById("image-input").addEventListener("change", handleImageUpload);
+
 // Función para añadir un textarea
 function addTextarea(type) {
     const container = document.getElementById("additional-fields");
 
     const textareaDiv = document.createElement("div");
     textareaDiv.classList.add("textarea-container");
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "x";
+    deleteButton.classList.add("delete-button");
+    deleteButton.onclick = () => {
+        textareaDiv.remove();
+    };
 
     const textarea = document.createElement("textarea");
     textarea.classList.add("custom-textarea");
@@ -77,16 +115,12 @@ function addTextarea(type) {
     } else if (type == "code") {
         textarea.name = "code_snippet";
         textarea.placeholder = "Introduce código en SQL u otro lenguaje";
+    } else if (type == "description") {
+        textarea.name = "description";
+        textarea.placeholder = "Introduce una descripción";
     }
 
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "x";
-    deleteButton.classList.add("delete-button");
-    deleteButton.onclick = () => {
-        container.removeChild(textareaDiv);
-    };
-
-    textareaDiv.appendChild(textarea);
     textareaDiv.appendChild(deleteButton);
+    textareaDiv.appendChild(textarea);
     container.appendChild(textareaDiv);
 }

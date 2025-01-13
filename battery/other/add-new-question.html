@@ -47,13 +47,13 @@
 
                         <div class="form-group">
                             <label for="error">Descripción</label>
-                            <textarea id="error" name="error" placeholder="Introduce el enunciado" required></textarea>
                         </div>
 
                         <div class="form-group">
                             <button type="button" onclick="addImageInput()">Añadir Imagen</button>
                             <button type="button" onclick="addTextarea('list')">Añadir Lista</button>
                             <button type="button" onclick="addTextarea('code')">Añadir Código</button>
+                            <button type="button" onclick="addTextarea('description')">Añadir Enunciado</button>
                         </div>
 
                         <!-- Contenedor de campos adicionales -->
@@ -62,13 +62,15 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="solucion">Opciones</label>
-                            <textarea id="solucion" name="solucion" placeholder="Contenido de la opción " required></textarea>
+                            <label for="option">Opciones</label>
+                            <textarea id="option" name="option" placeholder="Contenido de la opción " required></textarea>
+                            <button type="button" onclick="addTextarea('option')">Añadir Opción</button>
                         </div>
 
                         <div class="form-group">
                             <label for="solution">Solución</label>
                             <input type="text" id="solution" name="pregunta" placeholder="Ejemplo: 10" required>
+                            <button type="button" onclick="addTextarea('solution')">Añadir Solución</button>
                         </div>
 
                         <button type="submit">Enviar</button>

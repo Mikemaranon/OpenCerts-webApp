@@ -90,7 +90,7 @@
                     </div>
                 </section>
                 <?php
-                    if (isset($_SESSION['user_logged_in']) && $_SESSION['role'] === 'admin') {
+                    if (isset($_SESSION['user_logged_in']) && $_SESSION['role'] === 'editor') {
                         echo '<button onclick="window.location.href=\'errors-list.html\'">Ir a Inicio</button>';
                     }
                 ?>
