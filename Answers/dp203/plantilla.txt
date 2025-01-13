@@ -1,0 +1,6 @@
+"desc_x": aqui se ponen las descripciones del enunciado, todo lo que sea parradada
+"img_x": aqui se ponen las imagenes, como yo metere la ruta de cada imagen, porfavor nombrad a las imagenes con el formato T+TOPIC+P+QUESTION.png (por ejemplo, topic 1 pregunta 3 sería T1P3.png), en el caso de que haya más de una imagen, se nombrará T1P3-1.png, T1P3-2.png y sucesivamente
+"u_list_x": aquí se meterá una lista con cada uno de los elementos de la lista, lo he hecho así para que el resultado final sea mas bonito
+"code_x" si veis un código como una query de SQL o una instancia de una funcion en python, metedlo aqui poniendo <br> en cada salto de linea ("SELECT *<br>FROM tabla <br>WHERE date=1/1/2001" por ejemplo)
+
+la "x" en cada elemento se pone para tener en cuenta que haya varios del mismo tipo, por ejemplo desc_1, img_1, desc_2, code_1, img_2 sería una combinación posible dentro de una pregunta

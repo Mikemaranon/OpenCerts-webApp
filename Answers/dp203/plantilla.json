@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "type": "single-select",
+        "question": {
+            "desc_1": "descripcion 1",
+            "img_1": "",
+            "desc_2": "descripcion 2",
+            "code_1": "sql, js, cualquier otro lenguaje",
+            "u_list": [
+                "elemento de lista 1",
+                "elemento de lista 2",
+                "elemento de lista 3"
+            ],
+            "code_2": "sql, js, cualquier otro lenguaje",
+            "desc_3": "descripcion 3"
+        },
+        "options": [
+            "opcion 1", 
+            "opcion 2",
+            "opcion 3",
+            "opcion 4"
+        ],
+        "answer": "poner el índice de la pregunta como si fuera un array (0-3, ej: 2, que seria opcion 3)",
+        "topic": 1,
+        "tags": [
+            "sql", "azure-synapse-analytics", "topic-1"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "multiple-choice",
+        "question": {
+            "desc_1": "descripcion 1",
+            "img_1": "",
+            "desc_2": "descripcion 2",
+            "code_1": "sql, js, cualquier otro lenguaje",
+            "u_list": [
+                "elemento de lista 1",
+                "elemento de lista 2",
+                "elemento de lista 3"
+            ],
+            "code_2": "sql, js, cualquier otro lenguaje",
+            "desc_3": "descripcion 3"
+        },
+        "options": [
+            "opcion 1", 
+            "opcion 2", 
+            "opcion 3"
+        ],
+        "answer": [
+            "poner el indice de la respuesta como si fuera un array (0-3, ej: 2, que seria opcion 3)",
+            "poner el indice de la respuesta como si fuera un array (0-3, ej: 0, que seria opcion 1)"
+        ],
+        "topic": 1,
+        "tags": [
+            "sql", "azure-synapse-analytics", "data-warehouse", "partition", "topic-1"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "drag-drop",
+        "question": {
+            "desc_1": "descripcion 1",
+            "img_1": "",
+            "desc_2": "descripcion 2",
+            "code_1": "sql, js, cualquier otro lenguaje",
+            "u_list": [
+                "elemento de lista 1",
+                "elemento de lista 2",
+                "elemento de lista 3"
+            ],
+            "code_2": "sql, js, cualquier otro lenguaje",
+            "desc_3": "descripcion 3"
+        },
+        "options": [
+            "opcion 1", 
+            "opcion 2", 
+            "opcion 3"
+        ],
+        "answer": [
+            "poner el orden del indice de la respuesta como si fuera un array (0-3, ej: 2, que seria opcion 3)",
+            "poner el orden del indice de la respuesta como si fuera un array (0-3, ej: 0, que seria opcion 1)"
+        ],
+        "topic": 1,
+        "tags": [
+            "sql", "azure-synapse-analytics", "data-warehouse", "partition", "topic-1"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "hot-spot",
+        "question": {
+            "desc_1": "descripcion 1",
+            "img_1": "",
+            "desc_2": "descripcion 2",
+            "code_1": "sql, js, cualquier otro lenguaje",
+            "u_list": [
+                "elemento de lista 1",
+                "elemento de lista 2",
+                "elemento de lista 3"
+            ],
+            "code_2": "sql, js, cualquier otro lenguaje",
+            "desc_3": "descripcion 3"
+        },
+        "options": {
+            "ejemplo 1": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"],
+            "ejemplo 2": ["Opción 1", "Opción 2", "Opción 3", "Opción 4"]
+        },
+        "answer": {
+            "ejemplo 1": "Opción 3",
+            "ejemplo 2": "Opción 1"
+    },
+        "topic": 2,
+        "tags": [
+            "prueba", "topic-2"
+        ]
+    }
+]
