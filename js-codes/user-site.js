@@ -1,7 +1,7 @@
 // Simulación de datos recibidos del servidor
 const userData = {
     username: "Juan123",
-    photo: "styles/user-photo.jpg",
+    photo: "../styles/user-photo.jpg",
     exams: [
         { name: "dp-203", result: "85%", time: "60 minutos" },
         { name: "az-900", result: "90%", time: "45 minutos" },

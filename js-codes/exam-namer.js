@@ -7,22 +7,24 @@ function getQueryParam(name) {
 const examName = getQueryParam('examName');
 const lowercaseExamName = examName.toLowerCase();
 
-function replacePlaceholders() {
-    document.querySelectorAll('.jsonDirectory').forEach(element => {
-        element.textContent = element.textContent.replace(/@cert/g, examName).replace(/@lowcaseCert/g, lowercaseExamName);
-    });
+document.querySelectorAll('.jsonDirectory').forEach(element => {
+    element.textContent = element.textContent.replace(/@cert/g, examName).replace(/@lowcaseCert/g, lowercaseExamName);
+});
 
-    document.querySelectorAll('.jsonDirectoryTags').forEach(element => {
-        element.textContent = element.textContent.replace(/@cert/g, examName).replace(/@lowcaseCert/g, lowercaseExamName);
-    });
+document.querySelectorAll('.jsonDirectoryTags').forEach(element => {
+    element.textContent = element.textContent.replace(/@cert/g, examName).replace(/@lowcaseCert/g, lowercaseExamName);
+});
 
-    document.querySelectorAll('h1').forEach(element => {
-        element.textContent = element.textContent.replace(/@cert/g, examName);
-    });
-}
+document.querySelectorAll('h1').forEach(element => {
+    element.textContent = element.textContent.replace(/@cert/g, examName);
+});
 
 function getExamName() {
     return examName;
+}
+
+function getLowExamName() {
+    return lowercaseExamName;
 }
 
 function replaceInputValue() {

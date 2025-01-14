@@ -3,14 +3,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Batería de preguntas</title>
-        <link rel="stylesheet" href="../../styles/body-style.css">
-        <link rel="stylesheet" href="../../styles/chat-style.css">
-        <link rel="stylesheet" href="../../styles/generalStyle.css">
-        <link rel="stylesheet" href="../../styles/header-style.css">
-        <link rel="stylesheet" href="../../styles/topic-index.css">
-        <link rel="stylesheet" href="../../styles/questions.css"> 
-        <link rel="stylesheet" href="../../styles/background.css">
-        <link rel="stylesheet" href="../../styles/tags.css">
+        <link rel="stylesheet" href="../styles/body-style.css">
+        <link rel="stylesheet" href="../styles/chat-style.css">
+        <link rel="stylesheet" href="../styles/generalStyle.css">
+        <link rel="stylesheet" href="../styles/header-style.css">
+        <link rel="stylesheet" href="../styles/topic-index.css">
+        <link rel="stylesheet" href="../styles/questions.css"> 
+        <link rel="stylesheet" href="../styles/background.css">
+        <link rel="stylesheet" href="../styles/tags.css">
 
 
         <!-- select2: libreria para poder buscar en un select -->
@@ -18,7 +18,8 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-        <script defer src="../../js-codes/exam-builder.js"></script>
+        <script defer src="../js-codes/exam-namer.js"></script>
+        <script defer src="../js-codes/exam-builder.js"></script>
 
         <style>
             .select2-results__option {
@@ -35,11 +36,11 @@
         </style>
         
     </head>
-    <body onload="replacePlaceholders()">
+    <body>
         <header>
             <div>
                 <div class="button1">
-                    <button onclick="window.location.href='../exams-list.html'">Volver a la lista</button>
+                    <button onclick="window.location.href='../index/exams-list.html'">Volver a la lista</button>
                 </div>
             </div> 
             <div class="title">
@@ -105,12 +106,11 @@
         <p class="jsonDirectory">../Answers/@lowcaseCert/@lowcaseCert.json</p>
         <p class="jsonDirectoryTags">../Answers/@lowcaseCert/tags.json</p>
     </body>
-    <script src="../../js-codes/header.js"></script>
-    <script src="../../js-codes/multiple-choice.js"></script>
-    <script src="../../js-codes/single-select.js"></script>
-    <script src="../../js-codes/chat.js"></script>
-    <script src="../../js-codes/hot-spot.js"></script>
-    <script src="../../js-codes/drag-drop.js"></script>
-    <script src="../../js-codes/search-tag.js"></script>
-    <script src="../../js-codes/exam-namer.js"></script>
+    <script src="../js-codes/header.js"></script>
+    <script src="../js-codes/multiple-choice.js"></script>
+    <script src="../js-codes/single-select.js"></script>
+    <script src="../js-codes/chat.js"></script>
+    <script src="../js-codes/hot-spot.js"></script>
+    <script src="../js-codes/drag-drop.js"></script>
+    <script src="../js-codes/search-tag.js"></script>
 </html>

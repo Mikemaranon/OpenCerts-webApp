@@ -25,7 +25,7 @@ async function loadExams() {
 
         const examButton = document.createElement('button');
         examButton.textContent = 'Ir a examen';
-        examButton.onclick = () => window.location.href = `battery/battery.html?examName=${encodeURIComponent(exam.examName)}`;
+        examButton.onclick = () => window.location.href = `../battery/battery.html?examName=${encodeURIComponent(exam.examName)}`;
         buttonsDiv.appendChild(examButton);
 
         examContainer.appendChild(buttonsDiv);
