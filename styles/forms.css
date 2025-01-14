@@ -72,7 +72,7 @@ main {
 .form-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #333333;
 }
 
@@ -84,15 +84,13 @@ main {
     border-radius: 5px;
     font-size: 1rem;
     color: #333;
-    margin-top: 5px; /* Separación entre el label y el campo */
+    margin-bottom: 10px;
 }
 
 .form-group textarea {
     resize: vertical;
     min-height: 80px;
 }
-
-
 
 /* Estilo para el botón de envío */
 button {
@@ -179,56 +177,15 @@ footer {
     transition: opacity 0.3s;
 }
 
-/* Estilo para el título de la imagen */
-.image-title {
-    margin-top: 10px;
-    font-size: 14px;
-    color: gray;
-}
-
-/* Estilo para el botón X */
-.delete-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 0, 0, 0.7);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
 /* Estilo para el contenedor del textarea */
 .textarea-container {
     position: relative;
     margin-bottom: 10px; /* Add some spacing between textareas */
 }
 
-/* Mostrar la X al pasar el ratón */
-.image-container:hover .delete-button {
-    opacity: 1;
-}
-
-/* Mostrar la X al pasar el ratón */
-.textarea-container:hover .delete-button {
-    opacity: 1;
-}
-
-/* Estilo para los textareas añadidos */
-.custom-textarea {
-    width: 80%;
-    box-sizing: border-box;
-    margin-top: 10px;
-    padding: 10px;
+.input-container {
+    position: relative;
+    margin-bottom: 10px;
 }
 
 /* Mostrar la X al pasar el ratón */
@@ -238,6 +195,11 @@ footer {
 
 /* Mostrar la X al pasar el ratón */
 .textarea-container:hover .delete-button {
+    opacity: 1;
+}
+
+/* Mostrar la X al pasar el ratón */
+.input-container:hover .delete-button {
     opacity: 1;
 }
 
@@ -251,4 +213,8 @@ footer {
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: vertical;
+}
+
+.hidden {
+    display: none;
 }

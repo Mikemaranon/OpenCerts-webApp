@@ -1,3 +1,11 @@
+
+function setExamID() {
+    const examID = 0; // Valor por defecto
+    document.getElementById('examen').value = examID;
+    // valor recibido desde la pagina de bateria de preguntas
+    // asignado directamente al input de examID
+}
+
 function addImageInput() {
     const container = document.getElementById("additional-fields");
 
@@ -33,7 +41,6 @@ function addImageInput() {
     imageDiv.appendChild(deleteButton);
     imageDiv.appendChild(imageInput);
     container.appendChild(imageDiv);
-    container.appendChild(document.createElement("br"));
 }
 
 
@@ -89,9 +96,6 @@ function handleImageUpload(event, imageDiv, imageInput) {
     }
 }
 
-// Add event listener to the image input
-//document.getElementById("image-input").addEventListener("change", handleImageUpload);
-
 // Función para añadir un textarea
 function addTextarea(type) {
     const container = document.getElementById("additional-fields");
@@ -123,4 +127,63 @@ function addTextarea(type) {
     textareaDiv.appendChild(deleteButton);
     textareaDiv.appendChild(textarea);
     container.appendChild(textareaDiv);
+}
+
+function addOption() {
+    const container = document.getElementById('additional-options');
+
+    const inputDiv = document.createElement('div');
+    inputDiv.classList.add('input-container');
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.name = 'option';
+    input.placeholder = 'Contenido de la opción';
+    input.required = true;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'x';
+    deleteButton.classList.add('delete-button');
+    deleteButton.onclick = function() {
+        inputDiv.remove();
+    };
+
+    inputDiv.appendChild(deleteButton);
+    inputDiv.appendChild(input);
+    container.appendChild(inputDiv);
+}
+
+function addSolution() {
+    const container = document.getElementById('additional-solutions');
+
+    const inputDiv = document.createElement('div');
+    inputDiv.classList.add('input-container');
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.name = 'solution';
+    input.placeholder = 'Ejemplo: 10';
+    input.required = true;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'x';
+    deleteButton.classList.add('delete-button');
+    deleteButton.onclick = function() {
+        inputDiv.remove();
+    };
+
+    inputDiv.appendChild(deleteButton);
+    inputDiv.appendChild(input);
+    container.appendChild(inputDiv);
+}
+
+function generateJson() {
+    // generar el json a partir del contenido del formulario
+    let imgCounter = 0;
+    let listCounter = 0;
+    let codeCounter = 0;
+    let descCounter = 0;
+    
+
+    // enviar el json al servidor
 }

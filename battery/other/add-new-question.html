@@ -6,7 +6,7 @@
     <title>Formulario de Examen</title>
     <link rel="stylesheet" href="../../styles/forms.css">
 </head>
-<body>
+<body onload="replaceInputValue()">
     <div class="page-container">
         <header>
             <div class="header-container">
@@ -20,9 +20,10 @@
             <section class="center-section">
                 <div class="form-container">
                     <form action="#" method="post">
-                        <div class="form-group">
+                        <div class="form-group hidden">
                             <label for="examen">Examen (ID)</label>
-                            <input type="text" id="examen" name="examen" placeholder="Ejemplo: dp203" required>
+                            <input type="text" id="exam-name" name="exam-name" 
+                                value="">
                         </div>
 
                         <div class="form-group">
@@ -63,17 +64,28 @@
 
                         <div class="form-group">
                             <label for="option">Opciones</label>
-                            <textarea id="option" name="option" placeholder="Contenido de la opción " required></textarea>
-                            <button type="button" onclick="addTextarea('option')">Añadir Opción</button>
+                            <button type="button" onclick="addOption()">Añadir Opción</button>
+                        </div>
+
+                        <div class="form-group">
+                            <div id="additional-options"></div>
                         </div>
 
                         <div class="form-group">
                             <label for="solution">Solución</label>
-                            <input type="text" id="solution" name="pregunta" placeholder="Ejemplo: 10" required>
-                            <button type="button" onclick="addTextarea('solution')">Añadir Solución</button>
+                            <button type="button" onclick="addSolution()">Añadir Solución</button>
                         </div>
 
-                        <button type="submit">Enviar</button>
+                        <div class="form-group">
+                            <div id="additional-solutions"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tags">Tags</label>
+                            <textarea id="tag" name="pregunta" placeholder="separa cada tag con una coma: sql, avro, parquet, ... las compuestas separadas con guión: azure-synapse-analytics" required></textarea>
+                        </div>
+
+                        <button type="submit" onclick="generateJson()">Enviar</button>
                     </form>
                 </div>
             </section>
@@ -83,5 +95,6 @@
         </footer>
     </div>
 </body>
-<script src="../../js-codes/new-question-form.js"></script>
+    <script src="../../js-codes/new-question-form.js"></script>
+    <script src="../../js-codes/exam-namer.js"></script>
 </html>

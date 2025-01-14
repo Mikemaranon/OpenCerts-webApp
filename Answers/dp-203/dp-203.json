@@ -4,7 +4,7 @@
         "type": "single-select",
         "question": {
             "desc_1": "You have a table in an Azure Synapse Analytics dedicated SQL pool. The table was created by using the following Transact-SQL statement.",
-            "img_1": "../../Answers/dp203/images/T1P1.png",
+            "img_1": "../Answers/dp-203/images/T1P1.png",
             "desc_2": "You need to alter the table to meet the following requirements:",
             "u_list": [
                 "Ensure that users can identify the current manager of employees.",
@@ -19,6 +19,7 @@
             "[ManagerEmployeeKey] [int] NULL", 
             "[ManagerName] [varchar](200) NULL"
         ],
+        "question_topic": 1,
         "topic": 1,
         "tags": [
             "sql", "azure-synapse-analytics", "topic-1"
@@ -32,7 +33,7 @@
             "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
             "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
             "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
-            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "img_1": "../Answers/dp-203/images/T1P2.png",
             "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
             "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
             "desc_4": "What will be returned by the query?"
@@ -125,7 +126,7 @@
             "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
             "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
             "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
-            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "img_1": "../Answers/dp-203/images/T1P2.png",
             "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
             "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
             "desc_4": "What will be returned by the query?"
@@ -147,7 +148,7 @@
             "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
             "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
             "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
-            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "img_1": "../Answers/dp-203/images/T1P2.png",
             "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
             "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
             "desc_4": "What will be returned by the query?"
@@ -169,7 +170,7 @@
             "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
             "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
             "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
-            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "img_1": "../Answers/dp-203/images/T1P2.png",
             "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
             "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
             "desc_4": "What will be returned by the query?"
@@ -191,7 +192,7 @@
             "desc_1": "You have an Azure Synapse workspace named MyWorkspace that contains an Apache Spark database named mytestdb.<br>You run the following command in an Azure Synapse Analytics Spark pool in MyWorkspace.",
             "code_1": "CREATE TABLE mytestdb.myParquetTable(<br>EmployeeID int,<br>EmployeeName string,<br>EmployeeStartDate date)",
             "desc_2": "USING Parquet -<br>You then use Spark to insert a row into mytestdb.myParquetTable. The row contains the following data.",
-            "img_1": "../../Answers/dp203/images/T1P2.png",
+            "img_1": "../Answers/dp-203/images/T1P2.png",
             "desc_3": "One minute later, you execute the following query from a serverless SQL pool in MyWorkspace.",
             "code_2": "SELECT EmployeeID -<br>FROM mytestdb.dbo.myParquetTable<br>WHERE EmployeeName = 'Alice';",
             "desc_4": "What will be returned by the query?"

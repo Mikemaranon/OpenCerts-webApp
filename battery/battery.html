@@ -35,7 +35,7 @@
         </style>
         
     </head>
-    <body>
+    <body onload="replacePlaceholders()">
         <header>
             <div>
                 <div class="button1">
@@ -43,18 +43,18 @@
                 </div>
             </div> 
             <div class="title">
-                <h1>Certification Exam: AZ-900</h1>
+                <h1>Certification Exam: @cert</h1>
             </div>
             <div class="button-container">
                 <div class="dropdown">
                     <button class="main-button" id="toggleDropdown">...</button>
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <button onclick="window.location.href='other/exam-form.html'">Realizar examen</button>
-                        <button onclick="window.location.href='other/add-new-question.html'">Añadir pregunta</button>
-                        <button onclick="window.location.href='other/error.html'">Reportar error</button>
-                    </div>
+                        <button onclick="window.location.href='other/exam-form.html?examName=' + getExamName()">Realizar examen</button>
+                        <button onclick="window.location.href='other/add-new-question.html?examName=' + getExamName()">Añadir pregunta</button>
+                        <button onclick="window.location.href='other/error.html?examName=' + getExamName()">Reportar error</button>
+                    </div> 
                 </div>
-            </div> 
+            </div>  
         </header>
         <main>
             <section class="back-section-left"></section>
@@ -81,7 +81,7 @@
                         </div>
                     </form>
                 </div>
-                <h1>Batería de preguntas del examen de certificación DP-203</h1>
+                <h1>Batería de preguntas del examen de certificación @cert</h1>
                 <div class="questions-container">
                     <!-- Preguntas generadas dinámicamente -->
                 </div>
@@ -102,8 +102,8 @@
                 </div> 
             </section>
         </main>
-        <p class="jsonDirectory">../../Answers/az900/az-900.json</p>
-        <p class="jsonDirectoryTags">../../Answers/az900/tags.json</p>
+        <p class="jsonDirectory">../Answers/@lowcaseCert/@lowcaseCert.json</p>
+        <p class="jsonDirectoryTags">../Answers/@lowcaseCert/tags.json</p>
     </body>
     <script src="../../js-codes/header.js"></script>
     <script src="../../js-codes/multiple-choice.js"></script>
@@ -112,4 +112,5 @@
     <script src="../../js-codes/hot-spot.js"></script>
     <script src="../../js-codes/drag-drop.js"></script>
     <script src="../../js-codes/search-tag.js"></script>
+    <script src="../../js-codes/exam-namer.js"></script>
 </html>
