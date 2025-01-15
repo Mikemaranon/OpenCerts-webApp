@@ -1,7 +1,7 @@
 async function loadExams() {
     const response = await fetch('exam-list.json');
     const exams = await response.json();
-    const sectionContent = document.getElementById('section-content');
+    const sectionContent = document.getElementById('dynamic-content');
 
     exams.forEach(exam => {
         const examContainer = document.createElement('div');
@@ -30,6 +30,10 @@ async function loadExams() {
 
         examContainer.appendChild(buttonsDiv);
         sectionContent.appendChild(examContainer);
+
+        const br = document.createElement('br');
+        sectionContent.appendChild(br);
+        
     });
 }
 

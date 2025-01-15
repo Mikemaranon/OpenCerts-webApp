@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Exam</title>
+        <link rel="stylesheet" href="../../styles/forms.css">
+    </head>
+    <style>
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .centered-title {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .right-button {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+    <body>
+        <div class="page-container">
+            <header>
+                <div class="header-container">
+                    <h1 class="centered-title">Añadir examen</h1>
+                    <button class="right-button" onclick="window.location.href='exams-list.html'">Volver</button>
+                </div>
+            </header>
+            <main>
+                <div class="form-container">    
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="exam-title">Título del Examen</label>
+                            <input type="text" id="exam-id" name="exam-id" placeholder="Ejemplo: DP-203" required>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="exam-description">Descripción del Examen</label>
+                            <textarea id="exam-description" name="exam-description" placeholder="Descripción del examen" required></textarea>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="exam-link">Enlace de Información</label>
+                            <input type="url" id="exam-link" name="exam-link" placeholder="Ejemplo: http://example.com" required>
+                        </div>
+                
+                        <div class="form-group">
+                            <button type="submit">Añadir Examen</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

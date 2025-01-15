@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exámenes de certificación</title>
-    <link rel="stylesheet" href="../styles/generalStyle.css">
-    <link rel="stylesheet" href="../styles/body-style.css">
-    <link rel="stylesheet" href="../styles/exams-list.css">
-    <link rel="stylesheet" href="../styles/topic-index.css">
-    <link rel="stylesheet" href="../styles/chat-style.css">
-    <link rel="stylesheet" href="../styles/background.css">
-</head>
-<body>
-    <header>
-        <div class="title">
-            <h1>Exámenes de certificación</h1>
-        </div>
-        <div class="button-container">
-            <button onclick="window.location.href='user-site.html'">Perfil de usuario</button>
-        </div>
-    </header>
-    <main>
-        <section class="back-section-left"></section>
-        <section class="section-content" id="section-content">
-            <!-- generado dinamicamente por un json -->
-        </section>
-        <section class="back-section-right"></section>
-    </main>
-    <footer>
-        Web designed by Miguel Marañón Quero & Roberto García Moreno
-    </footer>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exámenes de certificación</title>
+        <link rel="stylesheet" href="../styles/generalStyle.css">
+        <link rel="stylesheet" href="../styles/body-style.css">
+        <link rel="stylesheet" href="../styles/exams-list.css">
+        <link rel="stylesheet" href="../styles/topic-index.css">
+        <link rel="stylesheet" href="../styles/chat-style.css">
+        <link rel="stylesheet" href="../styles/background.css">
+    </head>
+    <style>
+        .half-width {
+            width: 50%;
+            margin: 0 auto;
+        }  
 
-    <script src="../js-codes/exam-lister.js"></script>
-</body>
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .centered button {
+            width: 100%;
+            font-size: 1.1em; /* Increased font size */
+        }
+    </style>
+    <body>
+        <header>
+            <div class="title">
+                <h1>Exámenes de certificación</h1>
+            </div>
+            <div class="button-container">
+                <button onclick="window.location.href='user-site.html'">Perfil de usuario</button>
+            </div>
+        </header>
+        <main>
+            <section class="back-section-left"></section>
+            <section class="section-content" id="section-content">
+                <div id="dynamic-content"><!-- generado dinamicamente por un json --></div>
+                <div class="exam-container half-width">
+                    <div class="buttons centered">
+                        <button onclick="window.location.href='add-exam.html'">Crear examen</button>
+                        <button onclick="window.location.href=''">Añadir examen</button>
+                    </div>
+                </div>
+            </section>
+            <section class="back-section-right"></section>
+        </main>
+        <footer>
+            Web designed by Miguel Marañón Quero & Roberto García Moreno
+        </footer>
+
+        <script src="../js-codes/exam-lister.js"></script>
+    </body>
 </html>
