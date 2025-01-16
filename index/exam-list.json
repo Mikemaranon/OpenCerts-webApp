@@ -10,5 +10,11 @@
         "description": "El examen AZ-900 está diseñado para quienes desean adquirir conocimientos fundamentales sobre Azure.",
         "infoLink": "https://learn.microsoft.com/es-es/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification",
         "examName": "AZ-900"
+    },
+    {
+        "title": "Examen AI-102",
+        "description": "El examen AI-102 está diseñado para quienes desean adquirir conocimientos fundamentales sobre El uso de herramientas de Inteligencia Artificial a través de Azure.",
+        "infoLink": "https://learn.microsoft.com/es-es/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification",
+        "examName": "AI-102"
     }
 ]

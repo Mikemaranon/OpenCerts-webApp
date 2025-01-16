@@ -1,0 +1,85 @@
+[
+    {
+        "id": 19,
+        "type": "hot-spot",
+        "question": {
+            "desc_1": "You are developing an internet-based training solution for remote learners.\nYour company identifies that during the training, some learners leave their desk for long periods or become distracted.\nYou need to use a video and audio feed from each learner's computer to detect whether the learner is present and paying attention. The solution must minimize development effort and identify each learner.\nWhich Azure Cognitive Services service should you use for each requirement? To answer, select the appropriate options in the answer area."
+        },
+        "options": {
+            "From a learner's video feed, verify whether the learner is present: ": ["Face", "Speech", "Text Analyctics"],
+            "From a learner's facial expression in the video feed, verify whether the learner is paying attention: ": ["Face", "Speech", "Text Analyctics"],
+            "From a learner's audio feed, detect whether the learner is talking: ": ["Face", "Speech", "Text Analyctics"]
+
+        },
+        "answer": {
+            "From a learner's video feed, verify whether the learner is present: ": "Face",
+            "From a learner's facial expression in the video feed, verify whether the learner is paying attention: ": "Face",
+            "From a learner's audio feed, detect whether the learner is talking: ": "Speech"
+        },
+        "topic": 1,
+        "question_topic": "19",
+        "tags": [
+            "azure-cognitive-services", "topic-1"
+        ]
+    },
+    {
+        "id": 20,
+        "type": "multiple-choice",
+        "question": {
+            "desc_1": "Provision a QnA Maker service in a new resource group named RG1.\nCreate an App Service plan in RG1 named AP1.\nProvision the QnA Maker service in RG1.\nThe following Azure resources are automatically created in RG1:\nAn App Service that hosts the QnA Maker runtime for handling requests.\nAn Azure Cognitive Search service that stores and indexes the knowledge base used by QnA Maker."
+        },
+        "options": [
+            "Language Understanding", 
+            "Azure SQL Database", 
+            "Azure Storage",
+            "Azure Cognitive Search",
+            "Azure App Service"
+        ],
+        "answer": [
+            "3",
+            "4"
+        ],
+        "topic": 1,
+        "question_topic": "20",
+        "tags": [
+            "qna-maker", "azure-cognitive-search", "azure-app-service", "azure-resource-group", "app-service-plan", "knowledge-base", "cognitive-services"
+        ]
+    },
+    {
+        "id": 21,
+        "type": "single-select",
+        "question": {
+            "desc_1": "You are building a language model by using a Language Understanding (classic) service.\nYou create a new Language Understanding (classic) resource.\nYou need to add more contributors.\nWhat should you use?"
+        },
+        "options": [
+            "a conditional access policy in Azure Active Directory (Azure AD)", 
+            "the Access control (IAM) page for the authoring resources in the Azure portal",
+            "the Access control (IAM) page for the prediction resources in the Azure portal"
+        ],
+        "answer": "1",
+        "topic": 1,
+        "question_topic": "21",
+        "tags": [
+            "language-understanding", "azure-active-directory", "access-control", "azure-portal", "iam", "contributors", "resource-authoring", "model-training"
+        ]
+    },
+    {
+        "id": 67,
+        "type": "single-select",
+        "question": {
+            "desc_1": "You have a Microsoft OneDrive folder that contains a 20-GB video file named File1.avi. You need to index File1.avi by using the Azure Video Indexer website. What should you do?"
+        },
+        "options": [
+            "Upload File1.avi to the www.youtube.com webpage, and then copy the URL of the video to the Azure AI Video Indexer website.",
+            "Download File1.avi to a local computer, and then upload the file to the Azure AI Video Indexer website.",
+            "From OneDrive, create a download link, and then copy the link to the Azure AI Video Indexer website.",
+            "From OneDrive, create a sharing link for File1.avi, and then copy the link to the Azure AI Video Indexer website."
+        ],
+        "answer": [3],
+        "topic": 1,
+        "question_topic": 67,
+        "tags": [
+            "Microsoft OneDrive", "Azure Video Indexer"
+        ]
+    }
+]
