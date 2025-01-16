@@ -322,17 +322,21 @@ function renderQuestions(jsonList) {
                         ${Object.keys(question.options)
                             .map(
                                 (key, index) => `
-                            <label class="margin-label">${key}
-                            <select name="question[${index + 1}]" id="select[${index + 1}]">
-                                ${question.options[key]
-                                    .map(
-                                        (option, subIndex) => `
-                                    <option value="opcion${subIndex + 1}">${option}</option>
-                                `
-                                    )
-                                    .join('')}
-                            </select></label>
-                        `
+                                <label class="margin-label">
+                                    <div class="hot-spot-section">
+                                        <div class="htsp-key">${key}</div>
+                                    <div class="htsp-value">
+                                        <select name="question[${index + 1}]" id="select[${index + 1}]">
+                                            ${question.options[key]
+                                                .map(
+                                                    (option, subIndex) => `
+                                                <option value="opcion${subIndex + 1}">${option}</option>
+                                            `
+                                                )
+                                                .join('')}
+                                    </select>
+                                    </div>
+                                </div></label> `
                             )
                             .join('')}
                         <div class="buttons">

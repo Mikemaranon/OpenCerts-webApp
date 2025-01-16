@@ -127,9 +127,9 @@
 }
 
 .margin-label {
-    margin-left: 10px;
+    display: flex;
     padding: 8px;
-    width: 40%;
+    width: 98%;
 }
 
 .question form label:hover {
@@ -211,7 +211,7 @@
     }
 
     .question form select {
-        width: 70%; /* Ancho completo dentro del contenedor */
+        min-width: 70%; /* Ancho completo dentro del contenedor */
         padding: 10px;
         margin-left: 5%;
         border: 1px solid #ccc;
@@ -246,5 +246,22 @@
     .question form option:checked {
         background-color: #007BFF;
         color: #fff;
+    }
+
+    .hot-spot-section {
+        display: flex;
+        gap: 10px;
+        width: 110%;
+        padding: 10px;
+    }
+
+    .htsp-key {
+        max-width: 65%;
+        left: 5%;
+    }
+
+    .htsp-value {
+        min-width: 30%;
+        margin-right: 0px;
     }
     

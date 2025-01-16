@@ -9,7 +9,6 @@
             "From a learner's video feed, verify whether the learner is present: ": ["Face", "Speech", "Text Analyctics"],
             "From a learner's facial expression in the video feed, verify whether the learner is paying attention: ": ["Face", "Speech", "Text Analyctics"],
             "From a learner's audio feed, detect whether the learner is talking: ": ["Face", "Speech", "Text Analyctics"]
-
         },
         "answer": {
             "From a learner's video feed, verify whether the learner is present: ": "Face",
@@ -80,6 +79,66 @@
         "question_topic": 67,
         "tags": [
             "Microsoft OneDrive", "Azure Video Indexer"
+        ]
+    },
+    {
+        "id": 70,
+        "type": "single-select",
+        "question": {
+            "desc_1": "You have an Azure DevOps pipeline named Pipeline1 that is used to deploy an app. Pipeline1 includes a step that will create an Azure AI services account.\nYou need to add a step to Pipeline1 that will identify the created Azure AI services account. The solution must minimize development effort.\nWhich Azure Command-Line Interface (CLI) command should you run?"
+        },
+        "options": [
+            "az resource link", 
+            "az cognitiveservices account network-rule",
+            "az cognitiveservices account show",
+            "az account list"
+        ],
+        "answer": "3",
+        "topic": 1,
+        "question_topic": "70",
+        "tags": [
+            "language-understanding", "azure-active-directory", "access-control", "azure-portal", "iam", "contributors", "resource-authoring", "model-training"
+        ]
+    },
+    {
+        "id": 71,
+        "type": "hot-spot",
+        "question": {
+            "desc_1": "You have 1,000 scanned images of hand-written survey responses. The surveys do NOT have a consistent layout.\nYou have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1.\nYou open Document Intelligence Studio and create a new project.\nYou need to extract data from the survey responses.\nThe solution must minimize development effort.\nTo where should you upload the images, and which type of model should you use? To answer, select the appropriate options in the answer area."
+        },
+        "options": {
+            "Upload to": ["An Azure Cosmos DB account", "An Azure Files share", "An Azure account"],
+            "Model to": ["Custom neural", "Custom template", "Identity document (ID)"]
+        },
+        "answer": {
+            "Upload to": ["An Azure account"],
+            "Model to": ["Custom neural"]
+        },
+        "topic": 1,
+        "question_topic": "71",
+        "tags": [
+            "language-understanding", "azure-active-directory", "access-control", "azure-portal", "iam", "contributors", "resource-authoring", "model-training"
+        ]
+    },
+    {
+        "id": 72,
+        "type": "hot-spot",
+        "question": {
+            "desc_1": "You are developing an application that will use the Computer Vision client library. The application has the following code.",
+            "img_1": "72.jpg"
+        },
+        "options": {
+            "Upload to": ["An Azure Cosmos DB account", "An Azure Files share", "An Azure account"],
+            "Model to": ["Custom neural", "Custom template", "Identity document (ID)"]
+        },
+        "answer": {
+            "Upload to": ["An Azure account"],
+            "Model to": ["Custom neural"]
+        },
+        "topic": 1,
+        "question_topic": "72",
+        "tags": [
+            "language-understanding", "azure-active-directory", "access-control", "azure-portal", "iam", "contributors", "resource-authoring", "model-training"
         ]
     }
 ]
