@@ -4,9 +4,9 @@
     error_reporting(E_ALL);
 
     // Conexión a la base de datos MySQL
-    $servername = "db"; // Nombre del servicio de la base de datos en Docker Compose
-    $username = "root";
-    $password = "rootpass";
+    $servername = "opencerts"; // Nombre del servicio de la base de datos en Docker Compose
+    $username = "admin";
+    $password = "1234";
     $dbname = "opencerts_db";
 
     // Crear la conexión
